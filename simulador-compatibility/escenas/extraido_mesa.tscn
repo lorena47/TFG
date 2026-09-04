@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://ivm1t68f83c"]
+
+[ext_resource type="PackedScene" uid="uid://d2plxmmokk382" path="res://modelos/glb/mesa.glb" id="1_defst"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_b7t3j"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="3_3m07l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hcbd1"]
+size = Vector3(0.05, 0.06, 0.15)
+
+[node name="mesa" unique_id=1827487059 instance=ExtResource("1_defst")]
+
+[node name="cuerpo" parent="." index="0" unique_id=44218195]
+surface_material_override/0 = ExtResource("2_b7t3j")
+
+[node name="tiradores" parent="." index="1" unique_id=1497777894]
+surface_material_override/0 = ExtResource("3_3m07l")
+
+[node name="soportes" parent="." index="2" unique_id=622890324]
+surface_material_override/0 = ExtResource("3_3m07l")
+
+[node name="superficie" parent="." index="3" unique_id=1227334449]
+surface_material_override/0 = ExtResource("2_b7t3j")
+
+[node name="cajones" parent="." index="4" unique_id=1778110347]
+surface_material_override/0 = ExtResource("2_b7t3j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5" unique_id=97745037]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=770217860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03472519, 0.031066895, 0)
+shape = SubResource("BoxShape3D_hcbd1")

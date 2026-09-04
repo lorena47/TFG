@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b4bsanvohex31"]
+
+[ext_resource type="PackedScene" uid="uid://cl6khlp4o610b" path="res://modelos/glb/mesa_antivibraciones.glb" id="1_n78l1"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_ahf8w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d0tor"]
+albedo_color = Color(0.46929657, 0.46929657, 0.4692964, 1)
+metallic_specular = 1.0
+roughness = 0.18
+rim = 0.2
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ahf8w"]
+
+[node name="mesa_antivibraciones" unique_id=1806883583 instance=ExtResource("1_n78l1")]
+
+[node name="mesa" parent="." index="0" unique_id=1777458193]
+surface_material_override/0 = ExtResource("2_ahf8w")
+
+[node name="placa" parent="mesa" index="0" unique_id=832594230]
+surface_material_override/0 = SubResource("StandardMaterial3D_d0tor")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=1718249190]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1716468534]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.45)
+shape = SubResource("BoxShape3D_ahf8w")

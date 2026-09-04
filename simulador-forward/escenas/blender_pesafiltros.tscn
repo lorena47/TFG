@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://dmi4tuwq71eo"]
+
+[ext_resource type="PackedScene" uid="uid://dujdraivnby5q" path="res://modelos/glb/pesafiltros.glb" id="1_gclfa"]
+[ext_resource type="Script" uid="uid://bjrhun48h7lq8" path="res://scripts_sistemas/movil.gd" id="1_n18dc"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_f3bam"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_svbl6"]
+[ext_resource type="Material" uid="uid://cs5snfwqhiab5" path="res://materiales_mios/conectores.tres" id="3_2y8eq"]
+
+[sub_resource type="Resource" id="Resource_0xttj"]
+script = ExtResource("2_svbl6")
+nombre = "Pesafiltros"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uv4ap"]
+size = Vector3(0.06, 0.05, 0.06)
+
+[node name="pesafiltros" type="Node3D" unique_id=1823114602]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1244742261]
+script = ExtResource("1_n18dc")
+info = SubResource("Resource_0xttj")
+
+[node name="modelo" parent="RigidBody3D" unique_id=930980788 instance=ExtResource("1_gclfa")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1848815089]
+surface_material_override/0 = ExtResource("2_f3bam")
+
+[node name="esmerilado" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=250217049]
+surface_material_override/0 = ExtResource("3_2y8eq")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=1825529114]
+surface_material_override/0 = ExtResource("2_f3bam")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=755673078]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.022033691, 0)
+shape = SubResource("BoxShape3D_uv4ap")
+
+[editable path="RigidBody3D/modelo"]

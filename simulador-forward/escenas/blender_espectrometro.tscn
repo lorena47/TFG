@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dwxdyk3v2afwj"]
+
+[ext_resource type="PackedScene" uid="uid://8f7nu0kehht5" path="res://modelos/glb/espectrometro.glb" id="1_c75pu"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="2_i6vpx"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="3_ay4g0"]
+[ext_resource type="Material" uid="uid://cpw4ys7kvv2oe" path="res://materiales_mios/puesto_estante.tres" id="3_erdbs"]
+[ext_resource type="Texture2D" uid="uid://bceob2ggdggbr" path="res://materiales_mios/espectrofotometro_001.png" id="4_iulms"]
+[ext_resource type="Material" uid="uid://db4bd2t77gjc4" path="res://materiales_mios/pasta_verde.tres" id="5_kjnph"]
+[ext_resource type="Texture2D" uid="uid://dupq0fmehcgjj" path="res://materiales_mios/espectrofotometro_002.png" id="5_tihxp"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="8_rl15m"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="9_t1qjh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i6vpx"]
+albedo_texture = ExtResource("4_iulms")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kjnph"]
+albedo_texture = ExtResource("5_tihxp")
+
+[sub_resource type="Resource" id="Resource_hlryh"]
+script = ExtResource("9_t1qjh")
+nombre = "Espectrómetro de masas"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tihxp"]
+size = Vector3(1, 1.4, 1.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kjnph"]
+size = Vector3(2.2, 1, 1.2)
+
+[node name="espectrometro" unique_id=276900189 instance=ExtResource("1_c75pu")]
+
+[node name="base_006" parent="." index="0" unique_id=530747878]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="modulo_006" parent="base_006" index="0" unique_id=1213640198]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="base_005" parent="." index="1" unique_id=1534806162]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="boton_005" parent="base_005" index="0" unique_id=802832106]
+surface_material_override/0 = ExtResource("3_ay4g0")
+
+[node name="detalle" parent="base_005" index="1" unique_id=621382724]
+surface_material_override/0 = ExtResource("3_erdbs")
+
+[node name="marca_005" parent="base_005" index="2" unique_id=165062009]
+surface_material_override/0 = ExtResource("5_kjnph")
+
+[node name="modulo_005" parent="base_005" index="3" unique_id=1912425889]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="base_001" parent="." index="2" unique_id=699266636]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="boton_001" parent="base_001" index="0" unique_id=1293472965]
+surface_material_override/0 = ExtResource("3_ay4g0")
+
+[node name="detalle_001" parent="base_001" index="1" unique_id=2044978392]
+surface_material_override/0 = SubResource("StandardMaterial3D_i6vpx")
+
+[node name="marca_001" parent="base_001" index="2" unique_id=1213211883]
+surface_material_override/0 = ExtResource("5_kjnph")
+
+[node name="modulo_001" parent="base_001" index="3" unique_id=802518921]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="base_002" parent="." index="3" unique_id=1116988668]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="boton_002" parent="base_002" index="0" unique_id=1374850506]
+surface_material_override/0 = ExtResource("3_ay4g0")
+
+[node name="detalle_002" parent="base_002" index="1" unique_id=1843790698]
+surface_material_override/0 = SubResource("StandardMaterial3D_kjnph")
+
+[node name="marca_002" parent="base_002" index="2" unique_id=2105452504]
+surface_material_override/0 = ExtResource("5_kjnph")
+
+[node name="modulo_002" parent="base_002" index="3" unique_id=1554949238]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="cuerpo" parent="." index="4" unique_id=1045110313]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="seccion" parent="." index="5" unique_id=746393633]
+surface_material_override/0 = ExtResource("3_erdbs")
+
+[node name="tubo" parent="." index="6" unique_id=795118083]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="union" parent="." index="7" unique_id=1424334957]
+surface_material_override/0 = ExtResource("3_erdbs")
+
+[node name="entrada" parent="." index="8" unique_id=1437241737]
+surface_material_override/0 = ExtResource("2_i6vpx")
+
+[node name="tapa" parent="." index="9" unique_id=1811534521]
+surface_material_override/0 = ExtResource("3_erdbs")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="10" unique_id=844129515]
+script = ExtResource("8_rl15m")
+info = SubResource("Resource_hlryh")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=645944628]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.592, 0.7, 0)
+shape = SubResource("BoxShape3D_tihxp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1479104023]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.214, 0.5, 0)
+shape = SubResource("BoxShape3D_kjnph")

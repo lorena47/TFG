@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://0cvl1ga0nvay"]
+
+[ext_resource type="PackedScene" uid="uid://c018weeporlr2" path="res://modelos/glb/centrifuga.glb" id="1_2a8kp"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_ubtat"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="3_ubtat"]
+[ext_resource type="Material" uid="uid://bljqgx6f73byr" path="res://materiales_mios/pasta_amarillo.tres" id="4_wrxq2"]
+[ext_resource type="Texture2D" uid="uid://clqbn0kdts5hd" path="res://materiales_mios/pantalla_centrifuga.png" id="6_qgs8f"]
+[ext_resource type="Material" uid="uid://cub5gj8r7sjqj" path="res://materiales_mios/centrifuga.tres" id="6_ubtat"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="7_4l1hc"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="8_c81bn"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="9_wrxq2"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="10_wrxq2"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="11_a6q3w"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_asg0o"]
+albedo_texture = ExtResource("6_qgs8f")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_a6q3w"]
+script = ExtResource("10_wrxq2")
+nombre = "Centrífuga"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c0vv1"]
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="Resource" id="Resource_qgs8f"]
+script = ExtResource("10_wrxq2")
+nombre = "Centrífuga"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4l1hc"]
+size = Vector3(3, 2, 3.3)
+
+[node name="centrifuga" unique_id=1242936705 instance=ExtResource("1_2a8kp")]
+script = ExtResource("2_ubtat")
+puertas = Array[String]([""])
+
+[node name="cuerpo" parent="." index="0" unique_id=2112695978]
+surface_material_override/0 = ExtResource("7_4l1hc")
+
+[node name="boton" parent="cuerpo" index="0" unique_id=925453005]
+surface_material_override/0 = ExtResource("3_ubtat")
+
+[node name="color" parent="cuerpo/boton" index="0" unique_id=1549231229]
+surface_material_override/0 = ExtResource("4_wrxq2")
+
+[node name="fondoPantalla" parent="cuerpo" index="1" unique_id=1289746260]
+surface_material_override/0 = ExtResource("6_ubtat")
+
+[node name="frontal" parent="cuerpo" index="2" unique_id=655984948]
+surface_material_override/0 = ExtResource("7_4l1hc")
+
+[node name="interiorCuerpo" parent="cuerpo" index="3" unique_id=1382573925]
+surface_material_override/0 = ExtResource("3_ubtat")
+
+[node name="pantalla" parent="cuerpo" index="4" unique_id=202902070]
+surface_material_override/0 = SubResource("StandardMaterial3D_asg0o")
+
+[node name="rotor" parent="cuerpo" index="5" unique_id=86969537]
+surface_material_override/0 = ExtResource("7_4l1hc")
+
+[node name="visagra" parent="cuerpo" index="6" unique_id=1614385572]
+surface_material_override/0 = ExtResource("8_c81bn")
+
+[node name="visagra_001" parent="cuerpo" index="7" unique_id=1680427891]
+surface_material_override/0 = ExtResource("8_c81bn")
+
+[node name="puerta" parent="." index="1" unique_id=32198597]
+surface_material_override/0 = ExtResource("7_4l1hc")
+
+[node name="interior" parent="puerta" index="0" unique_id=164295385]
+surface_material_override/0 = ExtResource("3_ubtat")
+
+[node name="tope" parent="puerta" index="1" unique_id=188504893]
+surface_material_override/0 = ExtResource("8_c81bn")
+
+[node name="tope_001" parent="puerta" index="2" unique_id=1611163279]
+surface_material_override/0 = ExtResource("8_c81bn")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puerta" index="3" unique_id=818257254]
+script = ExtResource("9_wrxq2")
+info = SubResource("Resource_a6q3w")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puerta/StaticBody3D" index="0" unique_id=1607694362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 0.2, 1)
+shape = SubResource("BoxShape3D_c0vv1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=654127921]
+script = ExtResource("11_a6q3w")
+info = SubResource("Resource_qgs8f")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=659268907]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0.15)
+shape = SubResource("BoxShape3D_4l1hc")

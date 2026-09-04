@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://crkhs7lbv6va3"]
+
+[ext_resource type="PackedScene" uid="uid://c8npyf1yr6pbl" path="res://modelos/glb/microondas.glb" id="1_xu20m"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_1uuw5"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_cmvvw"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="3_6koq8"]
+[ext_resource type="Material" uid="uid://cs5snfwqhiab5" path="res://materiales_mios/conectores.tres" id="4_e3gog"]
+[ext_resource type="Material" uid="uid://cfyjtx58710wo" path="res://materiales_mios/espectrofotometro.tres" id="5_6koq8"]
+[ext_resource type="Material" uid="uid://cub5gj8r7sjqj" path="res://materiales_mios/centrifuga.tres" id="5_qvrmh"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="6_cmvvw"]
+[ext_resource type="Texture2D" uid="uid://dbipj1gtcvo2l" path="res://materiales_mios/pantalla_microondas.png" id="7_e3gog"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="9_olrjj"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="11_olrjj"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="12_mqyaa"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_olrjj"]
+albedo_texture = ExtResource("7_e3gog")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_mqyaa"]
+script = ExtResource("11_olrjj")
+nombre = "Microondas"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e3gog"]
+size = Vector3(1, 1, 0.1)
+
+[sub_resource type="Resource" id="Resource_ob6xo"]
+script = ExtResource("11_olrjj")
+nombre = "Microondas"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ob6xo"]
+size = Vector3(1, 1.2, 1)
+
+[node name="microondas" unique_id=468738144 instance=ExtResource("1_xu20m")]
+script = ExtResource("2_cmvvw")
+puertas = Array[String]([""])
+
+[node name="cuerpo" parent="." index="0" unique_id=1416651057]
+surface_material_override/0 = ExtResource("2_1uuw5")
+
+[node name="boton" parent="cuerpo" index="0" unique_id=718527027]
+surface_material_override/0 = ExtResource("3_6koq8")
+
+[node name="click" parent="cuerpo/boton" index="0" unique_id=1931929893]
+surface_material_override/0 = ExtResource("3_6koq8")
+
+[node name="inferior" parent="cuerpo" index="1" unique_id=1888136659]
+surface_material_override/0 = ExtResource("4_e3gog")
+
+[node name="instructor" parent="cuerpo" index="2" unique_id=110466692]
+surface_material_override/0 = ExtResource("2_1uuw5")
+
+[node name="cable" parent="cuerpo/instructor" index="0" unique_id=445128198]
+surface_material_override/0 = ExtResource("5_6koq8")
+
+[node name="fondoPantalla" parent="cuerpo/instructor" index="1" unique_id=1755373941]
+surface_material_override/0 = ExtResource("5_qvrmh")
+
+[node name="pantalla" parent="cuerpo/instructor" index="2" unique_id=992884589]
+surface_material_override/0 = SubResource("StandardMaterial3D_olrjj")
+
+[node name="rotor" parent="cuerpo" index="3" unique_id=1727161516]
+surface_material_override/0 = ExtResource("2_1uuw5")
+
+[node name="numero" parent="cuerpo/rotor" index="0" unique_id=427610092]
+surface_material_override/0 = ExtResource("5_qvrmh")
+
+[node name="superior" parent="cuerpo" index="4" unique_id=687110899]
+surface_material_override/0 = ExtResource("5_qvrmh")
+
+[node name="puerta" parent="." index="1" unique_id=952144753]
+surface_material_override/0 = ExtResource("2_1uuw5")
+
+[node name="manija" parent="puerta" index="0" unique_id=1651750983]
+surface_material_override/0 = ExtResource("6_cmvvw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puerta" index="1" unique_id=1453344112]
+script = ExtResource("9_olrjj")
+info = SubResource("Resource_mqyaa")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puerta/StaticBody3D" index="0" unique_id=1186741972]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0.045)
+shape = SubResource("BoxShape3D_e3gog")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=889719362]
+script = ExtResource("12_mqyaa")
+info = SubResource("Resource_ob6xo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=103426062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0.03)
+shape = SubResource("BoxShape3D_ob6xo")

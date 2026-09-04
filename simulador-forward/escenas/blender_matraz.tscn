@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dphrouo42125"]
+
+[ext_resource type="Script" uid="uid://bjrhun48h7lq8" path="res://scripts_sistemas/movil.gd" id="1_807e8"]
+[ext_resource type="PackedScene" uid="uid://8n38afw7wewo" path="res://modelos/glb/matraz.glb" id="1_s1kno"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_aodv3"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_c8yiv"]
+[ext_resource type="Material" uid="uid://bpvkqtcoanh3p" path="res://materiales_mios/pasta_marron.tres" id="3_2go1o"]
+
+[sub_resource type="Resource" id="Resource_mwtye"]
+script = ExtResource("2_c8yiv")
+nombre = "Matraz"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hvyx5"]
+size = Vector3(0.09, 0.14, 0.09)
+
+[node name="matraz" type="Node3D" unique_id=1272374543]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=2133993815]
+script = ExtResource("1_807e8")
+info = SubResource("Resource_mwtye")
+
+[node name="modelo" parent="RigidBody3D" unique_id=2073448470 instance=ExtResource("1_s1kno")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1968038220]
+surface_material_override/0 = ExtResource("2_aodv3")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=2075702983]
+surface_material_override/0 = ExtResource("3_2go1o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=895620193]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.07, 0)
+shape = SubResource("BoxShape3D_hvyx5")
+
+[editable path="RigidBody3D/modelo"]

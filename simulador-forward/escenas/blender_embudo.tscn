@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://ckoqyum456sxg"]
+
+[ext_resource type="Script" uid="uid://bjrhun48h7lq8" path="res://scripts_sistemas/movil.gd" id="1_1tqvk"]
+[ext_resource type="PackedScene" uid="uid://f3pvu6l3ahdk" path="res://modelos/glb/embudo.glb" id="1_opcu3"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_llsxi"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l81m6"]
+size = Vector3(0.15, 0.2, 0.1)
+
+[node name="embudo" type="Node3D" unique_id=1535180002]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=870509543]
+freeze = true
+script = ExtResource("1_1tqvk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=115048892]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+shape = SubResource("BoxShape3D_l81m6")
+
+[node name="modelo" parent="RigidBody3D" unique_id=415218635 instance=ExtResource("1_opcu3")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1651364324]
+surface_material_override/0 = ExtResource("2_llsxi")
+
+[editable path="RigidBody3D/modelo"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b02ok8n7x0me8"]
+
+[ext_resource type="Script" uid="uid://43uyofgxg37c" path="res://scripts_sistemas/utensilio.gd" id="1_5rewb"]
+[ext_resource type="PackedScene" uid="uid://lt66gvss6onq" path="res://modelos/glb/espatula.glb" id="1_12fqn"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="2_5rewb"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_27eod"]
+
+[sub_resource type="Resource" id="Resource_pt1fg"]
+script = ExtResource("2_27eod")
+nombre = "Espátula"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_43imu"]
+size = Vector3(0.175, 0.02, 0.01)
+
+[node name="espatula" type="Node3D" unique_id=841317717]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1249557993]
+freeze = true
+script = ExtResource("1_5rewb")
+CANTIDAD_MAXIMA_CONTENIDO = 5
+incremento = 0.15
+info = SubResource("Resource_pt1fg")
+rotacion_mano = Vector3(90, 0, 0)
+escala_mano = Vector3(1.2, 1.2, 1.2)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=961668752]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008, 0)
+shape = SubResource("BoxShape3D_43imu")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1480679369 instance=ExtResource("1_12fqn")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1089361194]
+surface_material_override/0 = ExtResource("2_5rewb")
+
+[node name="contenido" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=131504970]
+visible = false
+
+[editable path="RigidBody3D/modelo"]

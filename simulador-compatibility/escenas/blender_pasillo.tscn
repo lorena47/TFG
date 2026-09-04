@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://gqg0upaftgm2"]
+
+[ext_resource type="PackedScene" uid="uid://b6yhow28qm064" path="res://modelos/glb/pasillo.glb" id="1_wdigc"]
+[ext_resource type="Material" uid="uid://c615g3xckomec" path="res://materiales_mios/pared.tres" id="2_2g257"]
+[ext_resource type="Material" uid="uid://b5sa53g3xyp5c" path="res://materiales_mios/azul.tres" id="3_8a4iw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2g257"]
+size = Vector3(30, 0.2, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8a4iw"]
+size = Vector3(30, 4, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yggva"]
+size = Vector3(0.05, 4, 5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6pb7c"]
+size = Vector3(0.05, 4, 5)
+
+[node name="pasillo" unique_id=503559506 instance=ExtResource("1_wdigc")]
+
+[node name="paredes" parent="." index="0" unique_id=1292687832]
+surface_material_override/0 = ExtResource("2_2g257")
+
+[node name="suelo" parent="paredes" index="0" unique_id=245873512]
+surface_material_override/0 = ExtResource("3_8a4iw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=920304910]
+
+[node name="suelo" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=961449070]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5)
+shape = SubResource("BoxShape3D_2g257")
+
+[node name="pared" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=1386152437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -5)
+shape = SubResource("BoxShape3D_8a4iw")
+
+[node name="pared2" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=883475860]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 2, -2.5)
+shape = SubResource("BoxShape3D_yggva")
+
+[node name="pared3" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=1642725249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 2, -2.5)
+shape = SubResource("BoxShape3D_6pb7c")

@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c1scdsyjsmia7"]
+
+[ext_resource type="Script" uid="uid://b2gxu61gyt6qy" path="res://scripts_sistemas/dispensado.gd" id="1_e803a"]
+[ext_resource type="PackedScene" uid="uid://bfvysfjnfvnma" path="res://modelos/glb/pastilla.glb" id="1_j5lh2"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_e8njw"]
+[ext_resource type="Material" uid="uid://c282okdspd3g8" path="res://materiales_mios/pastilla.tres" id="2_e803a"]
+
+[sub_resource type="Resource" id="Resource_6pwn4"]
+script = ExtResource("2_e8njw")
+nombre = "Pastilla de catalizador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e8njw"]
+size = Vector3(0.8, 0.3, 0.8)
+
+[node name="RigidBody3D" type="RigidBody3D" unique_id=386282721 groups=["contenido"]]
+script = ExtResource("1_e803a")
+info = SubResource("Resource_6pwn4")
+rotacion_mano = Vector3(45, 0, 0)
+escala_mano = Vector3(0.1, 0.1, 0.1)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1764805515]
+shape = SubResource("BoxShape3D_e8njw")
+
+[node name="modelo" parent="." unique_id=2144778539 instance=ExtResource("1_j5lh2")]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="cuerpo" parent="modelo" index="0" unique_id=1121122105]
+surface_material_override/0 = ExtResource("2_e803a")
+
+[editable path="modelo"]

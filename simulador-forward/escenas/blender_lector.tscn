@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://duftv1mk4j83g"]
+
+[ext_resource type="PackedScene" uid="uid://dtjysjkcynwm2" path="res://modelos/glb/lector.glb" id="1_sppbi"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="2_nqqbl"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="3_hsimw"]
+[ext_resource type="Texture2D" uid="uid://eorwb57awbmu" path="res://materiales_mios/pantalla_lector.png" id="4_d2yjn"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="5_aqyns"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="6_d2yjn"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="7_aqyns"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nnrjc"]
+albedo_texture = ExtResource("4_d2yjn")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_nnrjc"]
+script = ExtResource("7_aqyns")
+nombre = "Lector de placas"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nqqbl"]
+size = Vector3(2, 0.7, 1.9)
+
+[node name="lector" unique_id=205794814 instance=ExtResource("1_sppbi")]
+
+[node name="cuerpo" parent="." index="0" unique_id=1322842055]
+surface_material_override/0 = ExtResource("2_nqqbl")
+
+[node name="bajo" parent="." index="1" unique_id=314159044]
+surface_material_override/0 = ExtResource("3_hsimw")
+
+[node name="soporte" parent="." index="2" unique_id=437024224]
+surface_material_override/0 = ExtResource("3_hsimw")
+
+[node name="pantalla" parent="." index="3" unique_id=1404715023]
+surface_material_override/0 = SubResource("StandardMaterial3D_nnrjc")
+
+[node name="envases" parent="." index="4" unique_id=1033532787]
+surface_material_override/0 = ExtResource("5_aqyns")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5" unique_id=1061222366]
+script = ExtResource("6_d2yjn")
+info = SubResource("Resource_nnrjc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=749674778]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0.045)
+shape = SubResource("BoxShape3D_nqqbl")

@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dathogjyoiybn"]
+
+[ext_resource type="PackedScene" uid="uid://ci3jayjvxbx0n" path="res://modelos/glb/bureta.glb" id="1_nfats"]
+[ext_resource type="Material" uid="uid://dx5w813kt3bhw" path="res://materiales_mios/pasta_azul.tres" id="2_lodq8"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="3_ejfdn"]
+[ext_resource type="Script" uid="uid://cnjuinrxsinmo" path="res://scripts_sistemas/dosificador.gd" id="3_no61m"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="4_ap58e"]
+[ext_resource type="Material" uid="uid://ce5eqiimbn88w" path="res://materiales_mios/stand.tres" id="4_cudob"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="5_1cluo"]
+[ext_resource type="Material" uid="uid://bnov33we74072" path="res://materiales_mios/pasta_rojo.tres" id="6_jbg5s"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="7_34frc"]
+
+[sub_resource type="Resource" id="Resource_ap58e"]
+script = ExtResource("4_ap58e")
+nombre = "Bureta"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j7tt0"]
+size = Vector3(0.2, 0.6, 0.3)
+
+[node name="bureta" unique_id=13056650 instance=ExtResource("1_nfats")]
+
+[node name="marcador" parent="." index="0" unique_id=1375869130]
+surface_material_override/0 = ExtResource("4_cudob")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcador" index="0" unique_id=1802628180]
+script = ExtResource("3_no61m")
+info = SubResource("Resource_ap58e")
+texto_activar = "Abrir"
+texto_desactivar = "Cerrar"
+nombre_animacion = "Interaccion"
+nombres_aceptados = Array[String](["Matraz Erlenmeyer"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcador/StaticBody3D" index="0" unique_id=1011625742]
+transform = Transform3D(1, 0, 0, 0, 0.9999999, 0, 0, 0, 1, 0, 0.3, 0.05)
+shape = SubResource("BoxShape3D_j7tt0")
+
+[node name="Marker3D" type="Marker3D" parent="marcador/StaticBody3D" index="1" unique_id=1549448565]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.9999999, 0, 0, 0, 1, -0.016548047, 0.01, 0)
+
+[node name="contenedor" parent="." index="1" unique_id=2012557851]
+surface_material_override/0 = ExtResource("7_34frc")
+
+[node name="liquido" parent="contenedor" index="0" unique_id=2056584709]
+visible = false
+
+[node name="cuerpo" parent="." index="2" unique_id=1934493131]
+surface_material_override/0 = ExtResource("4_cudob")
+
+[node name="Conector" parent="cuerpo" index="0" unique_id=1227047715]
+surface_material_override/0 = ExtResource("7_34frc")
+
+[node name="Llave" parent="cuerpo/Conector" index="0" unique_id=62705814]
+surface_material_override/0 = ExtResource("7_34frc")
+
+[node name="Rueda" parent="cuerpo/Conector" index="1" unique_id=251802899]
+surface_material_override/0 = ExtResource("7_34frc")
+
+[node name="Sujeccion" parent="cuerpo" index="1" unique_id=383348005]
+surface_material_override/0 = ExtResource("4_cudob")
+
+[node name="Brazo" parent="cuerpo/Sujeccion" index="0" unique_id=1371476407]
+surface_material_override/0 = ExtResource("3_ejfdn")
+
+[node name="Agarre" parent="cuerpo/Sujeccion/Brazo" index="0" unique_id=638898192]
+surface_material_override/0 = ExtResource("5_1cluo")
+
+[node name="Mano" parent="cuerpo/Sujeccion/Brazo/Agarre" index="0" unique_id=661704376]
+surface_material_override/0 = ExtResource("6_jbg5s")
+
+[node name="TornilloCabeza" parent="cuerpo" index="2" unique_id=556872793]
+surface_material_override/0 = ExtResource("2_lodq8")
+
+[node name="TornilloCuerpo" parent="cuerpo/TornilloCabeza" index="0" unique_id=1424978362]
+surface_material_override/0 = ExtResource("3_ejfdn")
+
+[node name="TornilloCabeza_001" parent="cuerpo" index="3" unique_id=1369418023]
+surface_material_override/0 = ExtResource("2_lodq8")
+
+[node name="TornilloCuerpo_001" parent="cuerpo/TornilloCabeza_001" index="0" unique_id=1266125540]
+surface_material_override/0 = ExtResource("3_ejfdn")

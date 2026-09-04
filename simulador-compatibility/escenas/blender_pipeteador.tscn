@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://s8yrctg5csv0"]
+
+[ext_resource type="Script" uid="uid://bjrhun48h7lq8" path="res://scripts_sistemas/movil.gd" id="1_4nah1"]
+[ext_resource type="PackedScene" uid="uid://3npxgc7hxo8v" path="res://modelos/glb/pipeteador.glb" id="1_ptls7"]
+[ext_resource type="Material" uid="uid://bnov33we74072" path="res://materiales_mios/pasta_rojo.tres" id="2_g3lpb"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_y3yan"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="3_xtbah"]
+
+[sub_resource type="Resource" id="Resource_pk6ce"]
+script = ExtResource("2_y3yan")
+nombre = "Pipeteador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bx6us"]
+size = Vector3(0.02, 0.1, 0.02)
+
+[node name="pipeteador" type="Node3D" unique_id=2112991739]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1512918929]
+script = ExtResource("1_4nah1")
+info = SubResource("Resource_pk6ce")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1956229179 instance=ExtResource("1_ptls7")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1773729643]
+surface_material_override/0 = ExtResource("2_g3lpb")
+
+[node name="palanca" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=1881976014]
+surface_material_override/0 = ExtResource("3_xtbah")
+
+[node name="rueda" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=491467223]
+surface_material_override/0 = ExtResource("3_xtbah")
+
+[node name="superior" parent="RigidBody3D/modelo/cuerpo" index="2" unique_id=306122863]
+surface_material_override/0 = ExtResource("3_xtbah")
+
+[node name="tapon" parent="RigidBody3D/modelo/cuerpo" index="3" unique_id=1449965741]
+surface_material_override/0 = ExtResource("3_xtbah")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2026304049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.02, 0)
+shape = SubResource("BoxShape3D_bx6us")
+
+[editable path="RigidBody3D/modelo"]

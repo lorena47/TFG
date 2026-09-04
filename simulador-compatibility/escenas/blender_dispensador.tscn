@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://c1ds2sa7pjail"]
+
+[ext_resource type="PackedScene" uid="uid://cd2j8ka24qyld" path="res://modelos/glb/dispensador.glb" id="1_uw2qj"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="2_hqmim"]
+[ext_resource type="Material" uid="uid://cg62fk4wu0moy" path="res://materiales_mios/translucido.tres" id="3_enu5b"]
+[ext_resource type="Material" uid="uid://bljqgx6f73byr" path="res://materiales_mios/pasta_amarillo.tres" id="4_iqnrc"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="5_tr1vc"]
+[ext_resource type="Script" uid="uid://cnjuinrxsinmo" path="res://scripts_sistemas/dosificador.gd" id="6_hqmim"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="7_enu5b"]
+
+[sub_resource type="Resource" id="Resource_tr1vc"]
+script = ExtResource("7_enu5b")
+nombre = "Dispensador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_enu5b"]
+size = Vector3(9, 3.5, 2)
+
+[node name="dispensador" unique_id=1209308527 instance=ExtResource("1_uw2qj")]
+
+[node name="cuerpo" parent="." index="0" unique_id=795083148]
+surface_material_override/0 = ExtResource("2_hqmim")
+
+[node name="tapa" parent="cuerpo" index="0" unique_id=754951201]
+surface_material_override/0 = ExtResource("4_iqnrc")
+
+[node name="tornillo" parent="cuerpo/tapa" index="0" unique_id=693094965]
+surface_material_override/0 = ExtResource("2_hqmim")
+
+[node name="tubo" parent="cuerpo/tapa" index="1" unique_id=1298067168]
+surface_material_override/0 = ExtResource("5_tr1vc")
+
+[node name="tope" parent="cuerpo" index="1" unique_id=17482607]
+surface_material_override/0 = ExtResource("2_hqmim")
+
+[node name="marcador" parent="." index="1" unique_id=183569453]
+surface_material_override/0 = ExtResource("3_enu5b")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcador" index="0" unique_id=1644857668]
+script = ExtResource("6_hqmim")
+info = SubResource("Resource_tr1vc")
+texto_activar = "Dispensar"
+texto_desactivar = "Cargar"
+nombre_animacion = "Interaccion"
+nombres_aceptados = Array[String](["Tubo Kjeldahl"])
+
+[node name="Marker3D" type="Marker3D" parent="marcador/StaticBody3D" index="0" unique_id=1673451240]
+transform = Transform3D(-4.3711367e-08, -0.9999999, 1.4210855e-14, 0.9999999, -4.3711523e-08, 0, 0, -9.9531494e-14, 1, 4.5, 1.575, -0.12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcador/StaticBody3D" index="1" unique_id=151078831]
+transform = Transform3D(1, -1.7585056e-14, 7.1054274e-15, -5.3290705e-15, 0.70710677, -0.70710665, -3.5527137e-15, 0.7071067, 0.7071066, 1.1, -1.261, -0.65)
+shape = SubResource("BoxShape3D_enu5b")
+
+[node name="echar" parent="marcador" index="1" unique_id=1889367071]
+visible = false
+
+[node name="contenedor" parent="." index="2" unique_id=1857814864]
+surface_material_override/0 = ExtResource("3_enu5b")
+
+[node name="liquido" parent="contenedor" index="0" unique_id=1861182772]
+visible = false
+
+[node name="tapa_001" parent="contenedor" index="1" unique_id=260046379]
+surface_material_override/0 = ExtResource("2_hqmim")

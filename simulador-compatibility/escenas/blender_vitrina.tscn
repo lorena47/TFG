@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://ks4ci0meas46"]
+
+[ext_resource type="PackedScene" uid="uid://dd4ofd26hlww1" path="res://modelos/glb/vitrina.glb" id="1_m7nnj"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_hjfq8"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_l88n4"]
+[ext_resource type="Material" uid="uid://cpw4ys7kvv2oe" path="res://materiales_mios/puesto_estante.tres" id="3_5vjds"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="4_kj0u6"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="4_l88n4"]
+[ext_resource type="Material" uid="uid://bnov33we74072" path="res://materiales_mios/pasta_rojo.tres" id="5_l88n4"]
+[ext_resource type="Material" uid="uid://db4bd2t77gjc4" path="res://materiales_mios/pasta_verde.tres" id="6_e1bfe"]
+[ext_resource type="Material" uid="uid://bljqgx6f73byr" path="res://materiales_mios/pasta_amarillo.tres" id="7_s58up"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="10_e1bfe"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="11_e1bfe"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="12_s58up"]
+
+[sub_resource type="Resource" id="Resource_s58up"]
+script = ExtResource("11_e1bfe")
+nombre = "Vitrina de gases"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l88n4"]
+size = Vector3(3, 3.75, 1)
+
+[sub_resource type="Resource" id="Resource_s2fnj"]
+script = ExtResource("11_e1bfe")
+nombre = "Vitrina de gases"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kj0u6"]
+size = Vector3(3, 1.2, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s2fnj"]
+size = Vector3(3, 1, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_s58up"]
+size = Vector3(0.1, 3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7app3"]
+size = Vector3(0.1, 3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hirnk"]
+size = Vector3(3, 3, 0.1)
+
+[node name="vitrina" unique_id=649174702 instance=ExtResource("1_m7nnj")]
+script = ExtResource("2_l88n4")
+puertas = Array[String]([""])
+
+[node name="cuerpo" parent="." index="0" unique_id=280940933]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="boton" parent="cuerpo" index="0" unique_id=1073337494]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncabeza" parent="cuerpo/boton" index="0" unique_id=1233847560]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncolor" parent="cuerpo/boton" index="1" unique_id=624876299]
+surface_material_override/0 = ExtResource("5_l88n4")
+
+[node name="boton_001" parent="cuerpo" index="1" unique_id=950751621]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncabeza_001" parent="cuerpo/boton_001" index="0" unique_id=493994613]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncolor_001" parent="cuerpo/boton_001" index="1" unique_id=1750239118]
+surface_material_override/0 = ExtResource("6_e1bfe")
+
+[node name="boton_002" parent="cuerpo" index="2" unique_id=2128744270]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncabeza_002" parent="cuerpo/boton_002" index="0" unique_id=59499398]
+surface_material_override/0 = ExtResource("4_l88n4")
+
+[node name="botoncolor_002" parent="cuerpo/boton_002" index="1" unique_id=1638826289]
+surface_material_override/0 = ExtResource("7_s58up")
+
+[node name="cierre" parent="cuerpo" index="3" unique_id=240782257]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="controles" parent="cuerpo" index="4" unique_id=590942370]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="encimera" parent="cuerpo" index="5" unique_id=434882973]
+surface_material_override/0 = ExtResource("3_5vjds")
+
+[node name="extractor" parent="cuerpo" index="6" unique_id=45485324]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_001" parent="cuerpo" index="7" unique_id=301135973]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_002" parent="cuerpo" index="8" unique_id=1898665362]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_003" parent="cuerpo" index="9" unique_id=1852155176]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_004" parent="cuerpo" index="10" unique_id=1981960240]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_005" parent="cuerpo" index="11" unique_id=513873230]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_006" parent="cuerpo" index="12" unique_id=2058218556]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_007" parent="cuerpo" index="13" unique_id=1884589067]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="extractor_008" parent="cuerpo" index="14" unique_id=427524280]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="logo" parent="cuerpo" index="15" unique_id=1352739318]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="mueble" parent="cuerpo" index="16" unique_id=856725005]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="puertaSuperior" parent="cuerpo" index="17" unique_id=1089509557]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="cristal_001" parent="cuerpo/puertaSuperior" index="0" unique_id=490107406]
+surface_material_override/0 = ExtResource("4_kj0u6")
+
+[node name="puertaInferior" parent="." index="1" unique_id=1899129054]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="asa" parent="puertaInferior" index="0" unique_id=1406825457]
+surface_material_override/0 = ExtResource("2_hjfq8")
+
+[node name="cristal" parent="puertaInferior" index="1" unique_id=947625913]
+surface_material_override/0 = ExtResource("4_kj0u6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puertaInferior" index="2" unique_id=2066845657]
+script = ExtResource("10_e1bfe")
+info = SubResource("Resource_s58up")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puertaInferior/StaticBody3D" index="0" unique_id=1758829975]
+transform = Transform3D(1, 0, 0, 0, 0.9999996, 0, 0, 0, 0.9999999, 0, 0.4, 8.75)
+shape = SubResource("BoxShape3D_l88n4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=573326164]
+script = ExtResource("12_s58up")
+info = SubResource("Resource_s2fnj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1916933356]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.6, 0)
+shape = SubResource("BoxShape3D_kj0u6")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=80782934]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.675, 0)
+shape = SubResource("BoxShape3D_s2fnj")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1402050416]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5, 1.5, 0)
+shape = SubResource("BoxShape3D_s58up")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=545476834]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1.5, 0)
+shape = SubResource("BoxShape3D_7app3")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="StaticBody3D" index="4" unique_id=1607335391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -0.8)
+shape = SubResource("BoxShape3D_hirnk")

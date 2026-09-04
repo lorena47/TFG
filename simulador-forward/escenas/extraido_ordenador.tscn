@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c57xd18hh1npb"]
+
+[ext_resource type="PackedScene" uid="uid://b3paf70avqkbl" path="res://modelos/glb/ordenador.glb" id="1_nogwl"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="2_nv5gg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nv5gg"]
+albedo_color = Color(0.14622876, 0.14622876, 0.14622873, 1)
+roughness = 0.15
+
+[node name="ordenador" unique_id=509013180 instance=ExtResource("1_nogwl")]
+
+[node name="raton" parent="." index="0" unique_id=1519559260]
+surface_material_override/0 = ExtResource("2_nv5gg")
+
+[node name="cableRaton" parent="raton" index="0" unique_id=1087807195]
+surface_material_override/0 = ExtResource("2_nv5gg")
+
+[node name="soporte" parent="." index="1" unique_id=1423997976]
+surface_material_override/0 = ExtResource("2_nv5gg")
+
+[node name="monitor" parent="soporte" index="0" unique_id=2033941358]
+surface_material_override/0 = SubResource("StandardMaterial3D_nv5gg")
+
+[node name="marco" parent="soporte/monitor" index="0" unique_id=2085792222]
+surface_material_override/0 = ExtResource("2_nv5gg")
+
+[node name="teclado" parent="." index="2" unique_id=1240937138]
+surface_material_override/0 = ExtResource("2_nv5gg")
+
+[node name="cableTeclado" parent="teclado" index="0" unique_id=1769280396]
+surface_material_override/0 = ExtResource("2_nv5gg")

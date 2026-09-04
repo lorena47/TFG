@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://rln5bl4l7hr6"]
+
+[ext_resource type="PackedScene" uid="uid://b6ybdo5jns8xl" path="res://modelos/glb/extractor.glb" id="1_lp84g"]
+[ext_resource type="Material" uid="uid://ce5eqiimbn88w" path="res://materiales_mios/stand.tres" id="2_58agf"]
+[ext_resource type="Material" uid="uid://bnov33we74072" path="res://materiales_mios/pasta_rojo.tres" id="2_gdxjp"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="2_luxqe"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_t6emq"]
+[ext_resource type="Material" uid="uid://cs5snfwqhiab5" path="res://materiales_mios/conectores.tres" id="3_4xjss"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="4_luh8k"]
+[ext_resource type="Material" uid="uid://dsorqk73vihiq" path="res://materiales_mios/crema.tres" id="7_fwxtt"]
+[ext_resource type="Material" uid="uid://dx5w813kt3bhw" path="res://materiales_mios/pasta_azul.tres" id="9_vkgts"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="10_7h200"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="11_wekrs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luxqe"]
+albedo_color = Color(0.17254902, 0.40392157, 1, 1)
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kdq6u"]
+albedo_color = Color(0.17254902, 0.40392157, 1, 1)
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_luh8k"]
+albedo_color = Color(0.17254902, 0.40392157, 1, 1)
+metallic_specular = 1.0
+roughness = 0.5
+
+[sub_resource type="Resource" id="Resource_vu46q"]
+script = ExtResource("11_wekrs")
+nombre = "Extractor"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_osmdw"]
+size = Vector3(0.2, 0.7, 0.35)
+
+[node name="extractor" unique_id=2014115437 instance=ExtResource("1_lp84g")]
+
+[node name="Bottomedflask" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="0" unique_id=1558551475]
+surface_material_override/0 = ExtResource("2_t6emq")
+
+[node name="BrazoInferior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="1" unique_id=1644193274]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="Agarre" parent="Objeto/BrazoInferior" index="0" unique_id=135548659]
+surface_material_override/0 = ExtResource("4_luh8k")
+
+[node name="Mano" parent="Objeto/BrazoInferior/Agarre" index="0" unique_id=1587546018]
+surface_material_override/0 = ExtResource("2_gdxjp")
+
+[node name="BrazoSuperior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="2" unique_id=564108978]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="Agarre_001" parent="Objeto/BrazoSuperior" index="0" unique_id=689287898]
+surface_material_override/0 = ExtResource("4_luh8k")
+
+[node name="Mano_001" parent="Objeto/BrazoSuperior" index="1" unique_id=56357102]
+surface_material_override/0 = ExtResource("2_gdxjp")
+
+[node name="Condenser" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="3" unique_id=1779070422]
+surface_material_override/0 = ExtResource("2_t6emq")
+
+[node name="ConectorInferior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="4" unique_id=1816866110]
+surface_material_override/0 = ExtResource("3_4xjss")
+
+[node name="ConectorSuperior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="5" unique_id=486201980]
+surface_material_override/0 = ExtResource("3_4xjss")
+
+[node name="ExtractionTube" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="6" unique_id=1083763360]
+surface_material_override/0 = ExtResource("2_t6emq")
+
+[node name="Heat" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="7" unique_id=882370771]
+surface_material_override/0 = ExtResource("7_fwxtt")
+
+[node name="Stand" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="8" unique_id=1072465767]
+surface_material_override/0 = ExtResource("2_58agf")
+
+[node name="SujeccionInferior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="9" unique_id=593449804]
+surface_material_override/0 = ExtResource("2_58agf")
+
+[node name="SujeccionSuperior" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="10" unique_id=1888633721]
+surface_material_override/0 = ExtResource("2_58agf")
+
+[node name="TornilloCabeza" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="11" unique_id=701492534]
+surface_material_override/0 = SubResource("StandardMaterial3D_luxqe")
+
+[node name="TornilloCuerpo" parent="Objeto/TornilloCabeza" index="0" unique_id=709311516]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="TornilloCabeza_001" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="12" unique_id=1946045877]
+surface_material_override/0 = SubResource("StandardMaterial3D_kdq6u")
+
+[node name="TornilloCuerpo_001" parent="Objeto/TornilloCabeza_001" index="0" unique_id=2050125203]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="TornilloCabeza_002" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="13" unique_id=1288713587]
+surface_material_override/0 = SubResource("StandardMaterial3D_luh8k")
+
+[node name="TornilloCuerpo_002" parent="Objeto/TornilloCabeza_002" index="0" unique_id=691507311]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="TornilloCabeza_003" parent="Objeto" parent_id_path=PackedInt32Array(1651886442) index="14" unique_id=1397127433]
+surface_material_override/0 = ExtResource("9_vkgts")
+
+[node name="TornilloCuerpo_003" parent="Objeto/TornilloCabeza_003" index="0" unique_id=1654449102]
+surface_material_override/0 = ExtResource("2_luxqe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=702136548]
+script = ExtResource("10_7h200")
+info = SubResource("Resource_vu46q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=575327472]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0.075)
+shape = SubResource("BoxShape3D_osmdw")

@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://luhrmyumlxra"]
+
+[ext_resource type="PackedScene" uid="uid://cuutq5m7mor54" path="res://modelos/glb/centrifugadora.glb" id="1_fddgx"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_drahb"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="3_mgo63"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="4_5ddd1"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="5_qh0sy"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="6_7m8b8"]
+[ext_resource type="Material" uid="uid://b0nx0y08qk4ie" path="res://materiales_mios/estufa.tres" id="6_c3y0c"]
+[ext_resource type="Material" uid="uid://cppvtdsr6sebu" path="res://materiales_mios/metal.tres" id="7_mgo63"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="7_w414q"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="10_7m8b8"]
+
+[sub_resource type="Resource" id="Resource_1751s"]
+script = ExtResource("7_w414q")
+nombre = "Centrífuga de Eppendorf"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rleab"]
+size = Vector3(0.02, 0.02, 0.005)
+
+[sub_resource type="Resource" id="Resource_w414q"]
+script = ExtResource("7_w414q")
+nombre = "Centrífuga de Eppendorf"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_drahb"]
+size = Vector3(0.02, 0.01, 0.022)
+
+[node name="centrifugadora" unique_id=2018983097 instance=ExtResource("1_fddgx")]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+script = ExtResource("2_drahb")
+puertas = Array[String]([""])
+
+[node name="cuerpo" parent="." index="0" unique_id=700986445]
+surface_material_override/0 = ExtResource("3_mgo63")
+
+[node name="tapa" parent="." index="1" unique_id=122118227]
+surface_material_override/0 = ExtResource("3_mgo63")
+
+[node name="manija" parent="tapa" index="0" unique_id=1992382618]
+surface_material_override/0 = ExtResource("4_5ddd1")
+
+[node name="tapon" parent="tapa" index="1" unique_id=378811854]
+surface_material_override/0 = ExtResource("5_qh0sy")
+
+[node name="visagra" parent="tapa" index="2" unique_id=1949713308]
+surface_material_override/0 = ExtResource("4_5ddd1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="tapa" index="3" unique_id=1032566630]
+script = ExtResource("6_7m8b8")
+info = SubResource("Resource_1751s")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tapa/StaticBody3D" index="0" unique_id=1915392023]
+transform = Transform3D(1, 0, 0, 0, 0.75069946, 0.66064376, 0, -0.66064376, 0.75069946, 0, 0.00881481, -0.006372311)
+shape = SubResource("BoxShape3D_rleab")
+
+[node name="muestras" parent="." index="2" unique_id=1361160274]
+surface_material_override/0 = ExtResource("5_qh0sy")
+
+[node name="tapas" parent="muestras" index="0" unique_id=1113938198]
+surface_material_override/0 = ExtResource("6_c3y0c")
+
+[node name="sujeccion" parent="." index="3" unique_id=1668815766]
+surface_material_override/0 = ExtResource("7_mgo63")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="5" unique_id=1375973303]
+script = ExtResource("10_7m8b8")
+info = SubResource("Resource_w414q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1261668973]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.005, 0)
+shape = SubResource("BoxShape3D_drahb")

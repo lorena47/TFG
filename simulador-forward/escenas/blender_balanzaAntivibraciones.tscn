@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://blyu7q0qmfsu3"]
+
+[ext_resource type="PackedScene" uid="uid://g80t1u8flp0a" path="res://modelos/glb/balanza_antivibraciones.glb" id="1_gf3lu"]
+[ext_resource type="Material" uid="uid://dsorqk73vihiq" path="res://materiales_mios/crema.tres" id="2_gci2j"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="3_rfrkb"]
+[ext_resource type="Texture2D" uid="uid://0wjgkncxcrsd" path="res://materiales_mios/pantalla_balanza.png" id="4_1uyei"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="5_rfrkb"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="6_1uyei"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="7_cusc0"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1uyei"]
+albedo_texture = ExtResource("4_1uyei")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_uslab"]
+script = ExtResource("7_cusc0")
+nombre = "Balanza de precisión con cristal"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gci2j"]
+size = Vector3(0.3, 0.45, 0.4)
+
+[node name="balanza_antivibraciones" unique_id=1688553650 instance=ExtResource("1_gf3lu")]
+
+[node name="cuerpo" parent="." index="0" unique_id=488021243]
+surface_material_override/0 = ExtResource("2_gci2j")
+
+[node name="aguante" parent="cuerpo" index="0" unique_id=249653062]
+surface_material_override/0 = ExtResource("2_gci2j")
+
+[node name="cristal" parent="cuerpo" index="1" unique_id=450558381]
+surface_material_override/0 = ExtResource("3_rfrkb")
+
+[node name="pantalla" parent="cuerpo" index="2" unique_id=1895388686]
+surface_material_override/0 = SubResource("StandardMaterial3D_1uyei")
+
+[node name="plataforma" parent="cuerpo" index="3" unique_id=1462115639]
+surface_material_override/0 = ExtResource("5_rfrkb")
+
+[node name="tapa" parent="cuerpo" index="4" unique_id=969377908]
+surface_material_override/0 = ExtResource("2_gci2j")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=591087923]
+script = ExtResource("6_1uyei")
+info = SubResource("Resource_uslab")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=25779388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.05)
+shape = SubResource("BoxShape3D_gci2j")

@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://dqswwu7m1twpc"]
+
+[ext_resource type="PackedScene" uid="uid://cfct225ojwvss" path="res://modelos/glb/bancada.glb" id="1_0jl1l"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="2_lywpd"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="3_6a605"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="4_lyxaw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jl1l"]
+size = Vector3(1.7, 0.1, 1.75)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lywpd"]
+size = Vector3(1.7, 0.1, 1.6)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6a605"]
+size = Vector3(0.4, 1.05, 1.6)
+
+[node name="bancada" type="Node3D" unique_id=954235413]
+
+[node name="cuerpo" parent="." unique_id=1599946787 instance=ExtResource("1_0jl1l")]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+
+[node name="pie_008" parent="cuerpo" index="0" unique_id=1683878849]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_005" parent="cuerpo" index="1" unique_id=1839618726]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_010" parent="cuerpo" index="2" unique_id=1822321471]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_006" parent="cuerpo" index="3" unique_id=638397592]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_011" parent="cuerpo" index="4" unique_id=617024451]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_009" parent="cuerpo" index="5" unique_id=1913632426]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_003" parent="cuerpo" index="6" unique_id=1789303352]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_002" parent="cuerpo" index="7" unique_id=1905967915]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_001" parent="cuerpo" index="8" unique_id=1143160416]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_004" parent="cuerpo" index="9" unique_id=1405355848]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie" parent="cuerpo" index="10" unique_id=1711952952]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_007" parent="cuerpo" index="11" unique_id=2126174624]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="palo_021" parent="cuerpo" index="12" unique_id=237047249]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_022" parent="cuerpo" index="13" unique_id=745198162]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_011" parent="cuerpo" index="14" unique_id=2032364746]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_001" parent="cuerpo" index="15" unique_id=1415272508]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_010" parent="cuerpo" index="16" unique_id=462613012]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_004" parent="cuerpo" index="17" unique_id=1714830128]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_009" parent="cuerpo" index="18" unique_id=1405182342]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo" parent="cuerpo" index="19" unique_id=1490248152]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_003" parent="cuerpo" index="20" unique_id=207679725]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_018" parent="cuerpo" index="21" unique_id=1064725173]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_016" parent="cuerpo" index="22" unique_id=1988299504]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_025" parent="cuerpo" index="23" unique_id=322540038]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_002" parent="cuerpo" index="24" unique_id=18280800]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_023" parent="cuerpo" index="25" unique_id=1963205213]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_015" parent="cuerpo" index="26" unique_id=399604578]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_014" parent="cuerpo" index="27" unique_id=1372262790]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_013" parent="cuerpo" index="28" unique_id=1802178951]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_019" parent="cuerpo" index="29" unique_id=741171657]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_006" parent="cuerpo" index="30" unique_id=160679863]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_007" parent="cuerpo" index="31" unique_id=726290555]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_008" parent="cuerpo" index="32" unique_id=1398277630]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_026" parent="cuerpo" index="33" unique_id=768596046]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_024" parent="cuerpo" index="34" unique_id=1713012324]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_012" parent="cuerpo" index="35" unique_id=2065624803]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_005" parent="cuerpo" index="36" unique_id=777275712]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_017" parent="cuerpo" index="37" unique_id=198054868]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_020" parent="cuerpo" index="38" unique_id=364389501]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="mueble" parent="cuerpo" index="39" unique_id=691962382]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="mueble_002" parent="cuerpo" index="40" unique_id=1605754499]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="mueble_001" parent="cuerpo" index="41" unique_id=1539696003]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="cajon_004" parent="cuerpo" index="42" unique_id=1070152677]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="cajon_001" parent="cuerpo" index="43" unique_id=458213061]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="cajon_003" parent="cuerpo" index="44" unique_id=1141236123]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="cajon_002" parent="cuerpo" index="45" unique_id=2042329385]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="cajon" parent="cuerpo" index="46" unique_id=219575625]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="puerta_002" parent="cuerpo" index="47" unique_id=1700669087]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tirador_007" parent="cuerpo" index="48" unique_id=612345980]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_003" parent="cuerpo" index="49" unique_id=1494282376]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_009" parent="cuerpo" index="50" unique_id=1888642980]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_010" parent="cuerpo" index="51" unique_id=594248560]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_011" parent="cuerpo" index="52" unique_id=178505442]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_008" parent="cuerpo" index="53" unique_id=2123551635]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_002" parent="cuerpo" index="54" unique_id=47129690]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_001" parent="cuerpo" index="55" unique_id=2083039]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador_005" parent="cuerpo" index="56" unique_id=1969464065]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tirador" parent="cuerpo" index="57" unique_id=741387993]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="poyo" parent="cuerpo" index="58" unique_id=978097754]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tornillo_005" parent="cuerpo" index="59" unique_id=710069164]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_011" parent="cuerpo" index="60" unique_id=315033775]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo" parent="cuerpo" index="61" unique_id=621680400]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_002" parent="cuerpo" index="62" unique_id=738982964]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_004" parent="cuerpo" index="63" unique_id=1536291431]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_010" parent="cuerpo" index="64" unique_id=462895407]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_009" parent="cuerpo" index="65" unique_id=1287739994]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_001" parent="cuerpo" index="66" unique_id=2113355267]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_003" parent="cuerpo" index="67" unique_id=1954197732]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_006" parent="cuerpo" index="68" unique_id=2139676961]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_007" parent="cuerpo" index="69" unique_id=990212685]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="tornillo_008" parent="cuerpo" index="70" unique_id=1562999682]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="marco_001" parent="cuerpo" index="71" unique_id=162000440]
+surface_material_override/0 = ExtResource("4_lyxaw")
+
+[node name="marco" parent="cuerpo" index="72" unique_id=171153690]
+surface_material_override/0 = ExtResource("4_lyxaw")
+
+[node name="interruptor_001" parent="cuerpo" index="73" unique_id=2077857797]
+surface_material_override/0 = ExtResource("4_lyxaw")
+
+[node name="interruptor" parent="cuerpo" index="74" unique_id=1101264397]
+surface_material_override/0 = ExtResource("4_lyxaw")
+
+[node name="esquina" parent="cuerpo" index="75" unique_id=389206918]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_007" parent="cuerpo" index="76" unique_id=76950380]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_003" parent="cuerpo" index="77" unique_id=669871302]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="soporte_001" parent="cuerpo" index="78" unique_id=1816534335]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_006" parent="cuerpo" index="79" unique_id=1144253460]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_005" parent="cuerpo" index="80" unique_id=1624198055]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_001" parent="cuerpo" index="81" unique_id=25031206]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_004" parent="cuerpo" index="82" unique_id=1512102527]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tabla" parent="cuerpo" index="83" unique_id=1211267065]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tabla_001" parent="cuerpo" index="84" unique_id=959162366]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="soporte" parent="cuerpo" index="85" unique_id=2055648872]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="esquina_002" parent="cuerpo" index="86" unique_id=246344799]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="estante" parent="cuerpo" index="87" unique_id=713080575]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="estante_001" parent="cuerpo" index="88" unique_id=1001850028]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="puerta" parent="cuerpo" index="89" unique_id=1813013142]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tirador_006" parent="cuerpo/puerta" index="0" unique_id=1091379473]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="puerta_001" parent="cuerpo" index="90" unique_id=118108086]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tirador_004" parent="cuerpo/puerta_001" index="0" unique_id=1841830409]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="puerta_003" parent="cuerpo" index="91" unique_id=142904928]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tirador_012" parent="cuerpo/puerta_003" index="0" unique_id=223740482]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="puerta_004" parent="cuerpo" index="92" unique_id=598191471]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="tirador_013" parent="cuerpo/puerta_004" index="0" unique_id=1598156324]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_012" parent="cuerpo" index="93" unique_id=48340372]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_013" parent="cuerpo" index="94" unique_id=1530988092]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_014" parent="cuerpo" index="95" unique_id=1519054355]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="pie_015" parent="cuerpo" index="96" unique_id=592035836]
+surface_material_override/0 = ExtResource("2_lywpd")
+
+[node name="palo_027" parent="cuerpo" index="97" unique_id=1827333645]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_028" parent="cuerpo" index="98" unique_id=357097592]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_029" parent="cuerpo" index="99" unique_id=1608934057]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_030" parent="cuerpo" index="100" unique_id=1241663832]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="palo_031" parent="cuerpo" index="101" unique_id=496768667]
+surface_material_override/0 = ExtResource("3_6a605")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=262347968 groups=["apoyo"]]
+
+[node name="apoyo" type="CollisionShape3D" parent="StaticBody3D" unique_id=878501553]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, -0.04)
+shape = SubResource("BoxShape3D_0jl1l")
+
+[node name="apoyo2" type="CollisionShape3D" parent="StaticBody3D" unique_id=2089245182]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.15, 1.6047363)
+shape = SubResource("BoxShape3D_lywpd")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." unique_id=1244321054]
+
+[node name="obstaculo" type="CollisionShape3D" parent="StaticBody3D2" unique_id=1064617311]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7, 0)
+shape = SubResource("BoxShape3D_6a605")
+
+[editable path="cuerpo"]

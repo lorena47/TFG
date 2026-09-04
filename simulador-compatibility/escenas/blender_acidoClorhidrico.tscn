@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://b8uve33xu6mf6"]
+
+[ext_resource type="Script" uid="uid://bgu1we5if385q" path="res://scripts_sistemas/sustancia.gd" id="1_obmxa"]
+[ext_resource type="PackedScene" uid="uid://bxmt5fvuw24jv" path="res://modelos/glb/bote.glb" id="2_i8b7m"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_r2m61"]
+[ext_resource type="Material" uid="uid://cg62fk4wu0moy" path="res://materiales_mios/translucido.tres" id="3_r2m61"]
+[ext_resource type="Material" uid="uid://cc8o2ymbs5m43" path="res://materiales_mios/agua.tres" id="4_q0kjb"]
+[ext_resource type="Material" uid="uid://bnov33we74072" path="res://materiales_mios/pasta_rojo.tres" id="5_obmxa"]
+
+[sub_resource type="Resource" id="Resource_q0kjb"]
+script = ExtResource("2_r2m61")
+nombre = "Ácido clorhídrico 0.1N"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vu7j2"]
+size = Vector3(1.5, 3.5, 1)
+
+[node name="bote" type="Node3D" unique_id=757921511]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1496810611]
+script = ExtResource("1_obmxa")
+fluido = true
+info = SubResource("Resource_q0kjb")
+desplazamiento_mano = Vector3(0, -0.05, 0)
+escala_mano = Vector3(0.05, 0.05, 0.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=846055155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+shape = SubResource("BoxShape3D_vu7j2")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1378559756 instance=ExtResource("2_i8b7m")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1557609123]
+surface_material_override/0 = ExtResource("3_r2m61")
+
+[node name="liquido" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=661863999]
+surface_material_override/0 = ExtResource("4_q0kjb")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=810703733]
+surface_material_override/0 = ExtResource("5_obmxa")
+
+[editable path="RigidBody3D/modelo"]

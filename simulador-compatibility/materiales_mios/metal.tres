@@ -1,0 +1,8 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://cppvtdsr6sebu"]
+
+[resource]
+albedo_color = Color(0.69467384, 0.6946734, 0.6946736, 1)
+metallic = 1.0
+roughness = 0.6
+anisotropy_enabled = true
+anisotropy = 0.65

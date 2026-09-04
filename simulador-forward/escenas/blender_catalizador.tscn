@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bfywwgkeojcxy"]
+
+[ext_resource type="Script" uid="uid://daywvmvroynii" path="res://scripts_sistemas/contenedor.gd" id="1_hkcyp"]
+[ext_resource type="PackedScene" uid="uid://dfsid6rea5oh2" path="res://modelos/glb/frasco.glb" id="1_yafcp"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="2_hkcyp"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="3_4m1uq"]
+[ext_resource type="Material" uid="uid://b0nx0y08qk4ie" path="res://materiales_mios/estufa.tres" id="3_dwpm7"]
+[ext_resource type="PackedScene" uid="uid://c1scdsyjsmia7" path="res://escenas/blender_pastilla.tscn" id="5_dwpm7"]
+
+[sub_resource type="Resource" id="Resource_fviy6"]
+script = ExtResource("3_4m1uq")
+nombre = "Bote de catalizador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4m1uq"]
+size = Vector3(1.8, 3.3, 1)
+
+[node name="frasco" type="Node3D" unique_id=663399249]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=346616644]
+script = ExtResource("1_hkcyp")
+dispensador = true
+contenido = ExtResource("5_dwpm7")
+info = SubResource("Resource_fviy6")
+desplazamiento_mano = Vector3(0, -0.05, 0)
+escala_mano = Vector3(0.05, 0.05, 0.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1710909851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+shape = SubResource("BoxShape3D_4m1uq")
+
+[node name="modelo" parent="RigidBody3D" unique_id=9976626 instance=ExtResource("1_yafcp")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1411093364]
+surface_material_override/0 = ExtResource("2_hkcyp")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=979585033]
+surface_material_override/0 = ExtResource("3_dwpm7")
+
+[node name="Marker3D" type="Marker3D" parent="RigidBody3D" unique_id=439990439]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+
+[editable path="RigidBody3D/modelo"]

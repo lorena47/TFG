@@ -1,0 +1,99 @@
+[gd_scene format=3 uid="uid://bfltf03by44vt"]
+
+[ext_resource type="PackedScene" uid="uid://bdkd8mmx0m70p" path="res://modelos/glb/bala.glb" id="1_g3ky7"]
+[ext_resource type="Material" uid="uid://bm8hd42nuq860" path="res://materiales_mios/dorado.tres" id="2_kwvvl"]
+[ext_resource type="Material" uid="uid://cpw4ys7kvv2oe" path="res://materiales_mios/puesto_estante.tres" id="3_6iiat"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="4_7ldsw"]
+[ext_resource type="Material" uid="uid://cs5snfwqhiab5" path="res://materiales_mios/conectores.tres" id="5_2sweq"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="6_2sweq"]
+[ext_resource type="Texture2D" uid="uid://dgthjqfgx5aok" path="res://materiales_mios/pantalla_reloj1.png" id="7_7ldsw"]
+[ext_resource type="Texture2D" uid="uid://bwqcujpdn0voe" path="res://materiales_mios/pantalla_reloj2.png" id="8_2sweq"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="9_2sweq"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="10_wdsql"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhmnv"]
+albedo_texture = ExtResource("7_7ldsw")
+roughness = 0.15
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wdsql"]
+albedo_texture = ExtResource("8_2sweq")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_mhmnv"]
+script = ExtResource("10_wdsql")
+nombre = "Bala de gas"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7ldsw"]
+size = Vector3(0.8, 2.4, 0.7)
+
+[node name="bala" unique_id=1906409010 instance=ExtResource("1_g3ky7")]
+
+[node name="cuerpo" parent="." index="0" unique_id=690959336]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="apertura" parent="cuerpo" index="0" unique_id=1568562189]
+surface_material_override/0 = ExtResource("3_6iiat")
+
+[node name="cable" parent="cuerpo" index="1" unique_id=195142787]
+surface_material_override/0 = ExtResource("4_7ldsw")
+
+[node name="entrada_001" parent="cuerpo" index="2" unique_id=191885254]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="inferior" parent="cuerpo" index="3" unique_id=1031591948]
+surface_material_override/0 = ExtResource("5_2sweq")
+
+[node name="llave" parent="cuerpo" index="4" unique_id=211350062]
+surface_material_override/0 = ExtResource("6_2sweq")
+
+[node name="palanca" parent="cuerpo/llave" index="0" unique_id=430909689]
+surface_material_override/0 = ExtResource("6_2sweq")
+
+[node name="llave_001" parent="cuerpo" index="5" unique_id=1551214241]
+surface_material_override/0 = ExtResource("6_2sweq")
+
+[node name="palanca_001" parent="cuerpo/llave_001" index="0" unique_id=771732620]
+surface_material_override/0 = ExtResource("6_2sweq")
+
+[node name="reductor" parent="cuerpo" index="6" unique_id=840448383]
+surface_material_override/0 = ExtResource("5_2sweq")
+
+[node name="entrada" parent="cuerpo/reductor" index="0" unique_id=1811538340]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="reloj" parent="cuerpo/reductor" index="1" unique_id=287172144]
+surface_material_override/0 = ExtResource("3_6iiat")
+
+[node name="conexion" parent="cuerpo/reductor/reloj" index="0" unique_id=354231649]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="pantalla" parent="cuerpo/reductor/reloj" index="1" unique_id=992143777]
+transform = Transform3D(0.91376334, 0, -2.9802322e-08, 7.1054274e-15, 1.1110001, 2.220446e-15, 2.9802322e-08, -1.3322676e-15, 0.91376334, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_mhmnv")
+
+[node name="reloj_001" parent="cuerpo/reductor" index="2" unique_id=142454388]
+surface_material_override/0 = ExtResource("3_6iiat")
+
+[node name="conexion_001" parent="cuerpo/reductor/reloj_001" index="0" unique_id=304303278]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="pantalla_001" parent="cuerpo/reductor/reloj_001" index="1" unique_id=942174638]
+surface_material_override/0 = SubResource("StandardMaterial3D_wdsql")
+
+[node name="valvula" parent="cuerpo/reductor" index="3" unique_id=124575219]
+surface_material_override/0 = ExtResource("3_6iiat")
+
+[node name="salida" parent="cuerpo" index="7" unique_id=1516289745]
+surface_material_override/0 = ExtResource("2_kwvvl")
+
+[node name="superior" parent="cuerpo" index="8" unique_id=718246492]
+surface_material_override/0 = ExtResource("3_6iiat")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="1" unique_id=736940615]
+script = ExtResource("9_2sweq")
+info = SubResource("Resource_mhmnv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=219423322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.1959505, 1.2, 0)
+shape = SubResource("BoxShape3D_7ldsw")

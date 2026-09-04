@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://wbwmc1oa4dv5"]
+
+[ext_resource type="Script" uid="uid://bpw1jmvwjeqj0" path="res://scripts_ui/menu.gd" id="1_lti8b"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lti8b"]
+bg_color = Color(0.9607843, 0.9019608, 0.65882355, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.7882353, 0.6627451, 0.24313726, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="LabelSettings" id="LabelSettings_lti8b"]
+font_size = 36
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_ouk20"]
+font_size = 21
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_mae5d"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[node name="Menu" type="Control" unique_id=1190115816]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lti8b")
+
+[node name="PanelCreditos" type="Control" parent="." unique_id=296388370]
+visible = false
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelCreditos" unique_id=150492054]
+layout_mode = 0
+offset_top = 90.0
+offset_right = 1152.0
+offset_bottom = 490.0
+alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelCreditos/HBoxContainer" unique_id=932504127]
+layout_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="PanelCreditos" unique_id=1116071759]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -98.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ButtonVolver" type="Button" parent="PanelCreditos/HBoxContainer2" unique_id=1023535366]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "Volver"
+
+[node name="PanelPrincipal" type="HBoxContainer" parent="." unique_id=1091193996]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 652.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelPrincipal" unique_id=2089452059]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelPrincipal/MarginContainer" unique_id=2134663709]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonJugar" type="Button" parent="PanelPrincipal/MarginContainer/VBoxContainer" unique_id=36279084]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "INICIAR EXPERIMENTO GUIADO"
+
+[node name="ButtonEvaluar" type="Button" parent="PanelPrincipal/MarginContainer/VBoxContainer" unique_id=1953391039]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "INICIAR EVALUACIÓN"
+
+[node name="ButtonCred" type="Button" parent="PanelPrincipal/MarginContainer/VBoxContainer" unique_id=960198854]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "CRÉDITOS"
+
+[node name="PanelPausa" type="HBoxContainer" parent="." unique_id=1137842288]
+visible = false
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 652.0
+alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelPausa" unique_id=1474552914]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelPausa/MarginContainer" unique_id=1150380551]
+layout_mode = 2
+alignment = 1
+
+[node name="ButtonReanudar" type="Button" parent="PanelPausa/MarginContainer/VBoxContainer" unique_id=1238464841]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "SEGUIR CON EL EXPERIMENTO"
+
+[node name="ButtonFin" type="Button" parent="PanelPausa/MarginContainer/VBoxContainer" unique_id=1189825375]
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+text = "FINALIZAR"
+
+[node name="PanelEnhorabuena" type="Control" parent="." unique_id=1356559214]
+visible = false
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelEnhorabuena" unique_id=1951956836]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PanelEnhorabuena/CenterContainer" unique_id=2144992745]
+custom_minimum_size = Vector2(700, 350)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lti8b")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelEnhorabuena/CenterContainer" unique_id=1430846142]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelEnhorabuena/CenterContainer/MarginContainer" unique_id=1573218444]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelEnhorabuena/CenterContainer/MarginContainer/VBoxContainer" unique_id=1618319081]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "¡¡¡ ENHORABUENA !!!"
+label_settings = SubResource("LabelSettings_lti8b")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelEnhorabuena/CenterContainer/MarginContainer/VBoxContainer" unique_id=1748921409]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Has adquirido los conocimientos necesarios para realizar la evaluación de este experimento."
+label_settings = SubResource("LabelSettings_ouk20")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelEnhorabuena" unique_id=1348579350]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -144.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ButtonVolverInicio" type="Button" parent="PanelEnhorabuena/HBoxContainer" unique_id=921222896]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "Volver"
+
+[node name="PanelResultado" type="Control" parent="." unique_id=60395352]
+visible = false
+anchors_preset = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelResultado" unique_id=940736259]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -46.0
+offset_bottom = -46.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="PanelResultado/CenterContainer" unique_id=1133674305]
+custom_minimum_size = Vector2(700, 350)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lti8b")
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelResultado/CenterContainer" unique_id=916729602]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelResultado/CenterContainer/MarginContainer" unique_id=397865117]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelResultado/CenterContainer/MarginContainer/VBoxContainer" unique_id=1083553087]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+text = "RESULTADOS DE LA EVALUACIÓN"
+label_settings = SubResource("LabelSettings_lti8b")
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="PanelResultado/CenterContainer/MarginContainer/VBoxContainer" unique_id=1274419343]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Puntuación: n / 100"
+label_settings = SubResource("LabelSettings_mae5d")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelResultado" unique_id=1794088162]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -144.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="ButtonVolverInicio" type="Button" parent="PanelResultado/HBoxContainer" unique_id=538322422]
+custom_minimum_size = Vector2(300, 50)
+layout_mode = 2
+text = "Volver"
+
+[connection signal="pressed" from="PanelCreditos/HBoxContainer2/ButtonVolver" to="." method="_on_button_volver_pressed"]
+[connection signal="pressed" from="PanelPrincipal/MarginContainer/VBoxContainer/ButtonJugar" to="." method="_on_button_jugar_pressed"]
+[connection signal="pressed" from="PanelPrincipal/MarginContainer/VBoxContainer/ButtonEvaluar" to="." method="_on_button_evaluar_pressed"]
+[connection signal="pressed" from="PanelPrincipal/MarginContainer/VBoxContainer/ButtonCred" to="." method="_on_button_cred_pressed"]
+[connection signal="pressed" from="PanelPausa/MarginContainer/VBoxContainer/ButtonReanudar" to="." method="_on_button_reanudar_pressed"]
+[connection signal="pressed" from="PanelPausa/MarginContainer/VBoxContainer/ButtonFin" to="." method="_on_button_fin_pressed"]
+[connection signal="pressed" from="PanelEnhorabuena/HBoxContainer/ButtonVolverInicio" to="." method="_on_button_volver_inicio_pressed"]
+[connection signal="pressed" from="PanelResultado/HBoxContainer/ButtonVolverInicio" to="." method="_on_button_volver_inicio_pressed"]

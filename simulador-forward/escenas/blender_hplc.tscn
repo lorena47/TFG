@@ -1,0 +1,158 @@
+[gd_scene format=3 uid="uid://bu2kv3mlnnt4w"]
+
+[ext_resource type="PackedScene" uid="uid://b7oobpmwihvmf" path="res://modelos/glb/hplc.glb" id="1_t43oa"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_gjjjj"]
+[ext_resource type="Material" uid="uid://xn6ieiu7iad0" path="res://materiales_mios/cristal_azul.tres" id="3_1ckv2"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="3_2p1dc"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="4_m1mrd"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="4_xjksq"]
+[ext_resource type="Texture2D" uid="uid://dfbp7lm74f1fx" path="res://materiales_mios/hplc_modulo004.png" id="5_o318o"]
+[ext_resource type="Texture2D" uid="uid://ddn3tufurr7tp" path="res://materiales_mios/hplc_modulo001.png" id="6_ctxi3"]
+[ext_resource type="Texture2D" uid="uid://ttb6mnj8qxqn" path="res://materiales_mios/hplc_modulo003.png" id="6_m1mrd"]
+[ext_resource type="Texture2D" uid="uid://bixmyackncsx" path="res://materiales_mios/hplc_modulo002.png" id="7_qhu0n"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="11_mvcru"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="12_6grye"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sax4r"]
+albedo_texture = ExtResource("6_ctxi3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctxi3"]
+albedo_texture = ExtResource("7_qhu0n")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhu0n"]
+albedo_texture = ExtResource("6_m1mrd")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2p1dc"]
+albedo_texture = ExtResource("5_o318o")
+
+[sub_resource type="Resource" id="Resource_pq0jt"]
+script = ExtResource("12_6grye")
+nombre = "Cromatografía HPLC"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ua80x"]
+size = Vector3(1.8, 4.5, 2)
+
+[node name="hplc" unique_id=321941405 instance=ExtResource("1_t43oa")]
+
+[node name="base" parent="." index="0" unique_id=1335045663]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton" parent="base" index="0" unique_id=59091256]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca" parent="base" index="1" unique_id=1409852167]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo" parent="base" index="2" unique_id=176469233]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="base_001" parent="." index="1" unique_id=1732143093]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton_001" parent="base_001" index="0" unique_id=1026354276]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca_001" parent="base_001" index="1" unique_id=2054097930]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo_001" parent="base_001" index="2" unique_id=1197766970]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="cristal" parent="base_001/modulo_001" index="0" unique_id=675270459]
+surface_material_override/0 = ExtResource("3_1ckv2")
+
+[node name="dentro" parent="base_001/modulo_001" index="1" unique_id=1575356467]
+surface_material_override/0 = ExtResource("4_xjksq")
+
+[node name="interior" parent="base_001/modulo_001" index="2" unique_id=1717798002]
+surface_material_override/0 = SubResource("StandardMaterial3D_sax4r")
+
+[node name="base_002" parent="." index="2" unique_id=1449521691]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton_002" parent="base_002" index="0" unique_id=1180315219]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca_002" parent="base_002" index="1" unique_id=49584595]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo_002" parent="base_002" index="2" unique_id=1886656407]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="cristal_001" parent="base_002/modulo_002" index="0" unique_id=958061701]
+surface_material_override/0 = ExtResource("3_1ckv2")
+
+[node name="dentro_001" parent="base_002/modulo_002" index="1" unique_id=1251491450]
+surface_material_override/0 = ExtResource("4_xjksq")
+
+[node name="interior_001" parent="base_002/modulo_002" index="2" unique_id=119664535]
+surface_material_override/0 = SubResource("StandardMaterial3D_ctxi3")
+
+[node name="base_003" parent="." index="3" unique_id=941699439]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton_003" parent="base_003" index="0" unique_id=317033786]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca_003" parent="base_003" index="1" unique_id=200063074]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo_003" parent="base_003" index="2" unique_id=874779000]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="cristal_002" parent="base_003/modulo_003" index="0" unique_id=670353891]
+surface_material_override/0 = ExtResource("3_1ckv2")
+
+[node name="dentro_002" parent="base_003/modulo_003" index="1" unique_id=566039260]
+surface_material_override/0 = ExtResource("4_xjksq")
+
+[node name="interior_002" parent="base_003/modulo_003" index="2" unique_id=40056302]
+surface_material_override/0 = SubResource("StandardMaterial3D_qhu0n")
+
+[node name="base_004" parent="." index="4" unique_id=1822953456]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton_004" parent="base_004" index="0" unique_id=2080274753]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca_004" parent="base_004" index="1" unique_id=1890419784]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo_004" parent="base_004" index="2" unique_id=1434693270]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="cristal_003" parent="base_004/modulo_004" index="0" unique_id=458417196]
+surface_material_override/0 = ExtResource("3_1ckv2")
+
+[node name="dentro_003" parent="base_004/modulo_004" index="1" unique_id=962707903]
+surface_material_override/0 = ExtResource("4_xjksq")
+
+[node name="interior_003" parent="base_004/modulo_004" index="2" unique_id=229924044]
+surface_material_override/0 = SubResource("StandardMaterial3D_2p1dc")
+
+[node name="base_005" parent="." index="5" unique_id=871107585]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="boton_005" parent="base_005" index="0" unique_id=1782999762]
+surface_material_override/0 = ExtResource("3_2p1dc")
+
+[node name="marca_005" parent="base_005" index="1" unique_id=355665383]
+surface_material_override/0 = ExtResource("4_m1mrd")
+
+[node name="modulo_005" parent="base_005" index="2" unique_id=799986649]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="base_006" parent="." index="6" unique_id=579349267]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="modulo_006" parent="base_006" index="0" unique_id=1592161479]
+surface_material_override/0 = ExtResource("2_gjjjj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="7" unique_id=1928096761]
+script = ExtResource("11_mvcru")
+info = SubResource("Resource_pq0jt")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1724479885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.25, 0)
+shape = SubResource("BoxShape3D_ua80x")

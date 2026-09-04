@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://qu2ekmeu4fq8"]
+
+[ext_resource type="PackedScene" uid="uid://cili5ch3gsro8" path="res://modelos/glb/barquilla.glb" id="1_nexvc"]
+[ext_resource type="Script" uid="uid://c4myykypl2eg0" path="res://scripts_sistemas/recipiente.gd" id="1_sdw8y"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_dhi4v"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="2_sdw8y"]
+
+[sub_resource type="Resource" id="Resource_nmt3e"]
+script = ExtResource("2_dhi4v")
+nombre = "Barquilla"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nexvc"]
+size = Vector3(2, 0.5, 2)
+
+[node name="barquilla" type="Node3D" unique_id=731658010]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1219186465]
+script = ExtResource("1_sdw8y")
+solido = true
+CANTIDAD_MAXIMA_CONTENIDO = 3.0
+CANTIDAD_MAXIMA_LIQUIDO = 0.0
+info = SubResource("Resource_nmt3e")
+rotacion_mano = Vector3(90, 0, 0)
+escala_mano = Vector3(0.05, 0.05, 0.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1177593830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0)
+shape = SubResource("BoxShape3D_nexvc")
+
+[node name="modelo" parent="RigidBody3D" unique_id=513673214 instance=ExtResource("1_nexvc")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1119958142]
+surface_material_override/0 = ExtResource("2_sdw8y")
+
+[node name="contenido" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=2099665309]
+visible = false
+
+[node name="Marker3D" type="Marker3D" parent="RigidBody3D" unique_id=1354238016]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.1, 0)
+
+[editable path="RigidBody3D/modelo"]

@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://7w8u1rou4t5k"]
+
+[ext_resource type="PackedScene" uid="uid://crpdehw0fqyor" path="res://modelos/glb/estufa.glb" id="1_ft1gw"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_n4s8w"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="3_4tee8"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="3_7vsum"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="4_fknqc"]
+[ext_resource type="Material" uid="uid://b0nx0y08qk4ie" path="res://materiales_mios/estufa.tres" id="5_rrtgj"]
+[ext_resource type="Texture2D" uid="uid://bfyf4f4ewvcb0" path="res://materiales_mios/pantalla_estufa.png" id="7_exao0"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="8_fknqc"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="9_rrtgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0gxvs"]
+albedo_texture = ExtResource("7_exao0")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_rrtgj"]
+script = ExtResource("8_fknqc")
+nombre = "Estufa"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4rbsy"]
+size = Vector3(0.5, 0.55, 0.06)
+
+[sub_resource type="Resource" id="Resource_exao0"]
+script = ExtResource("8_fknqc")
+nombre = "Estufa"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0gxvs"]
+size = Vector3(0.5, 0.55, 0.5)
+
+[node name="Modelo" unique_id=1649637716 instance=ExtResource("1_ft1gw")]
+script = ExtResource("2_n4s8w")
+puertas = Array[String]([""])
+
+[node name="cuerpo" parent="." index="0" unique_id=678516030]
+surface_material_override/0 = ExtResource("3_7vsum")
+
+[node name="Interior" parent="cuerpo" index="0" unique_id=1343998541]
+surface_material_override/0 = ExtResource("4_fknqc")
+
+[node name="RejillaInferior" parent="cuerpo/Interior" index="0" unique_id=1893113859]
+surface_material_override/0 = ExtResource("4_fknqc")
+
+[node name="RejillaSuperior" parent="cuerpo/Interior" index="1" unique_id=2117077694]
+surface_material_override/0 = ExtResource("4_fknqc")
+
+[node name="VisagraCuerpoInferior" parent="cuerpo" index="1" unique_id=2017388103]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="VisagraCuerpoSuperior" parent="cuerpo" index="2" unique_id=79442358]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="puerta" parent="." index="1" unique_id=965241986]
+surface_material_override/0 = ExtResource("3_7vsum")
+
+[node name="Operador" parent="puerta" index="0" unique_id=2012496040]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="Manivela" parent="puerta/Operador" index="0" unique_id=1051230478]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="Pantalla" parent="puerta/Operador" index="1" unique_id=694230818]
+surface_material_override/0 = SubResource("StandardMaterial3D_0gxvs")
+
+[node name="VisagraPuertaInferior" parent="puerta" index="1" unique_id=480992274]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="VisagraPuertaSuperior" parent="puerta" index="2" unique_id=865340378]
+surface_material_override/0 = ExtResource("5_rrtgj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puerta" index="3" unique_id=362933664]
+script = ExtResource("3_4tee8")
+info = SubResource("Resource_rrtgj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puerta/StaticBody3D" index="0" unique_id=605395916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.255, 0, 0.03)
+shape = SubResource("BoxShape3D_4rbsy")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=1251706785]
+script = ExtResource("9_rrtgj")
+info = SubResource("Resource_exao0")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1046992877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.265, 0.03)
+shape = SubResource("BoxShape3D_0gxvs")

@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://b1j28g67truxk"]
+
+[ext_resource type="Script" uid="uid://c4myykypl2eg0" path="res://scripts_sistemas/recipiente.gd" id="1_bculv"]
+[ext_resource type="PackedScene" uid="uid://e5tjujy548ek" path="res://modelos/glb/tubo.glb" id="1_kori3"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_5dpdj"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_bk6m4"]
+
+[sub_resource type="Resource" id="Resource_6rnx0"]
+script = ExtResource("2_bk6m4")
+nombre = "Tubo Kjeldahl"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kori3"]
+size = Vector3(0.1, 0.44, 0.1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf5ke"]
+transparency = 1
+vertex_color_use_as_albedo = true
+roughness = 0.03
+
+[sub_resource type="SphereMesh" id="SphereMesh_5dpdj"]
+material = SubResource("StandardMaterial3D_kf5ke")
+radius = 0.03
+height = 0.06
+
+[node name="tubo" type="Node3D" unique_id=1506764562]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1033869259]
+script = ExtResource("1_bculv")
+fluido = true
+solido = true
+CANTIDAD_MAXIMA_CONTENIDO = 3.0
+CANTIDAD_MAXIMA_LIQUIDO = 10.0
+eje_escala_liquido = Vector3(0, 0, 6)
+info = SubResource("Resource_6rnx0")
+desplazamiento_mano = Vector3(0, -0.1, 0)
+escala_mano = Vector3(0.7, 0.7, 0.7)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=2085728935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22, 0)
+shape = SubResource("BoxShape3D_kori3")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1136846007 instance=ExtResource("1_kori3")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1858650515]
+surface_material_override/0 = ExtResource("2_5dpdj")
+
+[node name="base" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=912234120]
+visible = false
+
+[node name="contenido" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=76915869]
+visible = false
+
+[node name="liquido" parent="RigidBody3D/modelo/cuerpo" index="2" unique_id=595287973]
+visible = false
+
+[node name="Marker3D" type="Marker3D" parent="RigidBody3D" unique_id=1256356108]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.03, 0)
+
+[node name="particulas" type="CPUParticles3D" parent="RigidBody3D" unique_id=1684437616]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.41612652, 0)
+emitting = false
+amount = 6
+lifetime = 0.5
+randomness = 1.0
+mesh = SubResource("SphereMesh_5dpdj")
+emission_shape = 1
+emission_sphere_radius = 0.02
+gravity = Vector3(0, 9.8, 0)
+
+[editable path="RigidBody3D/modelo"]

@@ -1,0 +1,176 @@
+[gd_scene format=3 uid="uid://bhv03br4f6wwi"]
+
+[ext_resource type="PackedScene" uid="uid://dd0wta67eano8" path="res://modelos/glb/destilador.glb" id="1_71snj"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="2_lmpw2"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_x17cd"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="3_pdbnl"]
+[ext_resource type="Texture2D" uid="uid://r08pjrmnjtmt" path="res://materiales_mios/pantalla_destilador.png" id="4_7f824"]
+[ext_resource type="Material" path="res://materiales_mios/cristal_verdoso.tres" id="5_7f824"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="6_juiw2"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="7_x17cd"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="8_f3qkb"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="9_f3qkb"]
+[ext_resource type="Material" uid="uid://cg62fk4wu0moy" path="res://materiales_mios/translucido.tres" id="9_kc73b"]
+[ext_resource type="Script" uid="uid://ben740ibsccuy" path="res://scripts_sistemas/instrumento.gd" id="12_2yx06"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="13_ub133"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7f824"]
+albedo_texture = ExtResource("4_7f824")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_rdyk4"]
+script = ExtResource("13_ub133")
+nombre = "Destilador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x17cd"]
+size = Vector3(0.25, 0.018, 0.2)
+
+[sub_resource type="Resource" id="Resource_ub133"]
+script = ExtResource("13_ub133")
+nombre = "Destilador"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ub133"]
+size = Vector3(0.8, 0.4, 1.1)
+
+[sub_resource type="Resource" id="Resource_0imgy"]
+script = ExtResource("13_ub133")
+nombre = "Destilador dch"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kc73b"]
+size = Vector3(0.25, 0.7, 0.3)
+
+[sub_resource type="Resource" id="Resource_gr7eq"]
+script = ExtResource("13_ub133")
+nombre = "Destilador izq"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2yx06"]
+size = Vector3(0.35, 1.5, 0.3)
+
+[node name="destilador" unique_id=345339438 instance=ExtResource("1_71snj")]
+script = ExtResource("2_x17cd")
+puertas = Array[String]([""])
+carpeta = "destilador"
+sustituir_animacion = true
+
+[node name="cuerpo" parent="." index="0" unique_id=306965875]
+surface_material_override/0 = ExtResource("3_pdbnl")
+
+[node name="conector" parent="cuerpo" index="0" unique_id=172468766]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="cuerpoSujeccion" parent="cuerpo" index="1" unique_id=178895922]
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="cuerpoSujeccion_001" parent="cuerpo" index="2" unique_id=672458424]
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="embudo" parent="cuerpo" index="3" unique_id=450240736]
+surface_material_override/0 = ExtResource("7_x17cd")
+
+[node name="helice" parent="cuerpo" index="4" unique_id=996936925]
+surface_material_override/0 = ExtResource("7_x17cd")
+
+[node name="pantalla" parent="cuerpo" index="5" unique_id=1729114280]
+surface_material_override/0 = SubResource("StandardMaterial3D_7f824")
+
+[node name="pie" parent="cuerpo" index="6" unique_id=1864923746]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="pie_001" parent="cuerpo" index="7" unique_id=1265190702]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="rueda" parent="cuerpo" index="8" unique_id=810557479]
+surface_material_override/0 = ExtResource("8_f3qkb")
+
+[node name="rueda_001" parent="cuerpo" index="9" unique_id=1895320219]
+surface_material_override/0 = ExtResource("8_f3qkb")
+
+[node name="ruedaSujeccion" parent="cuerpo" index="10" unique_id=2062840725]
+transform = Transform3D(0.09806305, 0, 0, 0, -0.04603783, -0.086584516, 0, 0.086584516, -0.04603783, -0.13616604, -0.076052785, 0.05344205)
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="tornillo" parent="cuerpo" index="11" unique_id=206129318]
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="tornilloDch" parent="cuerpo" index="12" unique_id=762613226]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="tornilloIzq" parent="cuerpo" index="13" unique_id=2112916416]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="tuboDch" parent="cuerpo" index="14" unique_id=1888293173]
+surface_material_override/0 = ExtResource("7_x17cd")
+
+[node name="tuboDchSalida" parent="cuerpo" index="15" unique_id=2001974463]
+surface_material_override/0 = ExtResource("9_kc73b")
+
+[node name="tuboIzq" parent="cuerpo" index="16" unique_id=739477121]
+surface_material_override/0 = ExtResource("7_x17cd")
+
+[node name="tuboIzqSalida" parent="cuerpo" index="17" unique_id=242314170]
+surface_material_override/0 = ExtResource("9_kc73b")
+
+[node name="tuboIzqSujeccion" parent="cuerpo" index="18" unique_id=76486605]
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="puerta" parent="." index="1" unique_id=2112470565]
+surface_material_override/0 = ExtResource("5_7f824")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puerta" index="0" unique_id=110189174]
+script = ExtResource("9_f3qkb")
+info = SubResource("Resource_rdyk4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puerta/StaticBody3D" index="0" unique_id=2118737327]
+transform = Transform3D(0.9999999, 0, 0, 0, 0.99999964, 0, 0, 0, 0.9999999, 0.135, 0, 0.02)
+shape = SubResource("BoxShape3D_x17cd")
+
+[node name="marcador" parent="." index="2" unique_id=1202305501]
+surface_material_override/0 = ExtResource("2_lmpw2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcador" index="0" unique_id=1133576456]
+script = ExtResource("12_2yx06")
+info = SubResource("Resource_ub133")
+texto_activar = "Encender"
+texto_desactivar = "Apagar"
+nombre_animacion = "Interaccion"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcador/StaticBody3D" index="0" unique_id=482357156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.325, -0.035, 0)
+shape = SubResource("BoxShape3D_ub133")
+
+[node name="marcadorDch" parent="." index="3" unique_id=223430303]
+surface_material_override/0 = ExtResource("3_pdbnl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcadorDch" index="0" unique_id=2025522578]
+script = ExtResource("12_2yx06")
+info = SubResource("Resource_0imgy")
+nombres_aceptados = Array[String](["Matraz Erlenmeyer"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcadorDch/StaticBody3D" index="0" unique_id=561799106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.08)
+shape = SubResource("BoxShape3D_kc73b")
+
+[node name="Marker3D" type="Marker3D" parent="marcadorDch/StaticBody3D" index="1" unique_id=447356835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.35, 0.09)
+
+[node name="marcadorIzq" parent="." index="4" unique_id=346615669]
+surface_material_override/0 = ExtResource("6_juiw2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcadorIzq" index="0" unique_id=2067494291]
+script = ExtResource("12_2yx06")
+info = SubResource("Resource_gr7eq")
+texto_activar = "Sujetar"
+texto_desactivar = "Liberar"
+nombre_animacion = "Sujetar"
+nombres_aceptados = Array[String](["Tubo Kjeldahl"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcadorIzq/StaticBody3D" index="0" unique_id=585690181]
+transform = Transform3D(1, 0, 0, 0, 0.9999996, 0, 0, 0, 1, 0, -0.45, 0)
+shape = SubResource("BoxShape3D_2yx06")
+
+[node name="Marker3D" type="Marker3D" parent="marcadorIzq/StaticBody3D" index="1" unique_id=1753373412]
+transform = Transform3D(1, 0, 0, 0, 0.9999996, 0, 0, 0, 1, 0, -0.75, 0)

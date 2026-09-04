@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://bela73dr3np1j"]
+
+[ext_resource type="PackedScene" uid="uid://yhjt6sabpvkg" path="res://modelos/glb/armario_quimicos.glb" id="1_yix4y"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_1ivlo"]
+[ext_resource type="Material" uid="uid://db6baskt3wb5x" path="res://materiales_mios/muebles.tres" id="2_eh6ow"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="4_1ivlo"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="4_igmw5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_eh6ow"]
+size = Vector3(0.3, 1.2, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1ivlo"]
+size = Vector3(0.3, 1.2, 0.05)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_igmw5"]
+size = Vector3(0.55, 0.01, 0.225)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_sah0h"]
+size = Vector3(0.55, 0.01, 0.225)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jeba8"]
+size = Vector3(0.55, 0.01, 0.225)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_au5e6"]
+size = Vector3(0.55, 0.01, 0.225)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pyyys"]
+size = Vector3(0.02, 1.2, 0.25)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ussfo"]
+size = Vector3(0.02, 1.2, 0.25)
+
+[node name="armarioQuimicos" unique_id=770583464 instance=ExtResource("1_yix4y")]
+script = ExtResource("2_1ivlo")
+puertas = Array[String](["Izq", "Dch"])
+carpeta = "armario_quimicos"
+sustituir_animacion = true
+
+[node name="cuerpo" parent="." index="0" unique_id=921442908]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="estante" parent="cuerpo" index="0" unique_id=2133680043]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="estante_001" parent="cuerpo" index="1" unique_id=941069720]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="estante_002" parent="cuerpo" index="2" unique_id=1224973619]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="estante_003" parent="cuerpo" index="3" unique_id=2127382043]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="extractor" parent="cuerpo" index="4" unique_id=294886144]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra" parent="cuerpo" index="5" unique_id=2054993114]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra_001" parent="cuerpo" index="6" unique_id=1978587163]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra_002" parent="cuerpo" index="7" unique_id=1737491378]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra_003" parent="cuerpo" index="8" unique_id=1687200572]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra_004" parent="cuerpo" index="9" unique_id=896553093]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="visagra_005" parent="cuerpo" index="10" unique_id=1324921927]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="puertaIzq" parent="." index="1" unique_id=2107869614]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="tirador" parent="puertaIzq" index="0" unique_id=341527428]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puertaIzq" index="1" unique_id=2077728337]
+script = ExtResource("4_igmw5")
+lado = &"Izq"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puertaIzq/StaticBody3D" index="0" unique_id=1308860541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0, 0)
+shape = SubResource("BoxShape3D_eh6ow")
+
+[node name="puertaDch" parent="." index="2" unique_id=1766362277]
+surface_material_override/0 = ExtResource("2_eh6ow")
+
+[node name="tirador_001" parent="puertaDch" index="0" unique_id=1131983422]
+surface_material_override/0 = ExtResource("4_1ivlo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puertaDch" index="1" unique_id=726494668]
+script = ExtResource("4_igmw5")
+lado = &"Dch"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puertaDch/StaticBody3D" index="0" unique_id=336619225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0, 0)
+shape = SubResource("BoxShape3D_1ivlo")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="4" unique_id=1625465681 groups=["apoyo"]]
+
+[node name="apoyo" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=548833632]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.017, 0.18)
+shape = SubResource("BoxShape3D_igmw5")
+
+[node name="apoyo2" type="CollisionShape3D" parent="StaticBody3D" index="1" unique_id=635695789]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.245, 0.175)
+shape = SubResource("BoxShape3D_sah0h")
+
+[node name="apoyo3" type="CollisionShape3D" parent="StaticBody3D" index="2" unique_id=1311124089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.48523438, 0.175)
+shape = SubResource("BoxShape3D_jeba8")
+
+[node name="apoyo4" type="CollisionShape3D" parent="StaticBody3D" index="3" unique_id=725462276]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.73, 0.175)
+shape = SubResource("BoxShape3D_au5e6")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="." index="5" unique_id=1567062222]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2" index="0" unique_id=1225105930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.28536844, 0.6, 0.156)
+shape = SubResource("BoxShape3D_pyyys")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D2" index="1" unique_id=1821486590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.285, 0.6, 0.156)
+shape = SubResource("BoxShape3D_ussfo")

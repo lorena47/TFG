@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://d4gpdwetp4l75"]
+
+[ext_resource type="PackedScene" uid="uid://doiu07ijqhhf1" path="res://modelos/glb/taburete.glb" id="1_fyurk"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="2_7y20v"]
+[ext_resource type="Material" path="res://texturas_importadas/rubber/Rubber001_1K-PNG.tres" id="3_2xsgp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7y20v"]
+size = Vector3(0.03, 0.04, 0.03)
+
+[node name="taburete" unique_id=977230904 instance=ExtResource("1_fyurk")]
+transform = Transform3D(4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0)
+
+[node name="soportes" parent="." index="0" unique_id=1848471286]
+surface_material_override/0 = ExtResource("2_7y20v")
+
+[node name="asiento" parent="." index="1" unique_id=720753364]
+surface_material_override/0 = ExtResource("3_2xsgp")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1691588867]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=2064208648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.016527966, 0)
+shape = SubResource("BoxShape3D_7y20v")

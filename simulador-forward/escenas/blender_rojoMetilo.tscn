@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://b00kw68uvgquj"]
+
+[ext_resource type="PackedScene" uid="uid://qdgf857n5k6g" path="res://modelos/glb/bote_cuentagotas.glb" id="1_ilo41"]
+[ext_resource type="Script" uid="uid://bgu1we5if385q" path="res://scripts_sistemas/sustancia.gd" id="1_tjc07"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_466b1"]
+[ext_resource type="Material" uid="uid://cg62fk4wu0moy" path="res://materiales_mios/translucido.tres" id="2_fy062"]
+[ext_resource type="Material" uid="uid://c000baxkn3wak" path="res://materiales_mios/liquido_rojo.tres" id="3_eo3o3"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="4_d0t8x"]
+
+[sub_resource type="Resource" id="Resource_lo8t7"]
+script = ExtResource("2_466b1")
+nombre = "Rojo de metilo"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fy062"]
+size = Vector3(1.5, 5, 1)
+
+[node name="boteCuentagotas" type="Node3D" unique_id=986158714]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=190400399]
+script = ExtResource("1_tjc07")
+fluido = true
+info = SubResource("Resource_lo8t7")
+desplazamiento_mano = Vector3(0, -0.05, 0)
+escala_mano = Vector3(0.04, 0.04, 0.04)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=122480250]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45, 0)
+shape = SubResource("BoxShape3D_fy062")
+
+[node name="modelo" parent="RigidBody3D" unique_id=2143058296 instance=ExtResource("1_ilo41")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=781525548]
+surface_material_override/0 = ExtResource("2_fy062")
+
+[node name="gota" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=1923403493]
+visible = false
+surface_material_override/0 = ExtResource("3_eo3o3")
+
+[node name="liquido" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=1422833342]
+surface_material_override/0 = ExtResource("3_eo3o3")
+
+[node name="cima" parent="RigidBody3D/modelo/cuerpo/liquido" index="0" unique_id=177622371]
+visible = false
+surface_material_override/0 = ExtResource("3_eo3o3")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="2" unique_id=924747873]
+surface_material_override/0 = ExtResource("4_d0t8x")
+
+[editable path="RigidBody3D/modelo"]

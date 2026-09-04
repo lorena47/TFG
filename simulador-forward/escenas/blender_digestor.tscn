@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://gpm7pgfkcsjl"]
+
+[ext_resource type="PackedScene" uid="uid://dce22h2mjjgyq" path="res://modelos/glb/digestor.glb" id="1_7hubx"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="2_k540r"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="3_tddar"]
+[ext_resource type="Material" uid="uid://dsorqk73vihiq" path="res://materiales_mios/crema.tres" id="4_dulyy"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="4_s0vmy"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="5_s0vmy"]
+[ext_resource type="Script" uid="uid://ben740ibsccuy" path="res://scripts_sistemas/instrumento.gd" id="6_tddar"]
+
+[sub_resource type="Resource" id="Resource_kdikr"]
+script = ExtResource("4_s0vmy")
+nombre = "Digestor"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k540r"]
+size = Vector3(0.9, 5, 2)
+
+[node name="digestor" unique_id=1959676115 instance=ExtResource("1_7hubx")]
+
+[node name="marcador" parent="." index="0" unique_id=1725978296]
+surface_material_override/0 = ExtResource("2_k540r")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="marcador" index="0" unique_id=1686955980]
+transform = Transform3D(1.0000001, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, -1.0450006, 0)
+script = ExtResource("6_tddar")
+info = SubResource("Resource_kdikr")
+texto_activar = "Activar"
+texto_desactivar = "Desactivar"
+nombre_animacion = "Interaccion"
+nombres_aceptados = Array[String](["Tubo Kjeldahl"])
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="marcador/StaticBody3D" index="0" unique_id=853309013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, -0.3)
+shape = SubResource("BoxShape3D_k540r")
+
+[node name="Marker3D" type="Marker3D" parent="marcador/StaticBody3D" index="1" unique_id=820456989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 0)
+
+[node name="cuerpo" parent="." index="1" unique_id=2025276350]
+surface_material_override/0 = ExtResource("4_dulyy")
+
+[node name="barras" parent="cuerpo" index="0" unique_id=1046601326]
+surface_material_override/0 = ExtResource("2_k540r")
+
+[node name="barras_001" parent="cuerpo" index="1" unique_id=1452600547]
+surface_material_override/0 = ExtResource("2_k540r")
+
+[node name="colector" parent="cuerpo" index="2" unique_id=13001164]
+surface_material_override/0 = ExtResource("3_tddar")
+
+[node name="finalColector" parent="cuerpo/colector" index="0" unique_id=1992275050]
+surface_material_override/0 = ExtResource("5_s0vmy")
+
+[node name="lateral" parent="cuerpo" index="3" unique_id=1529956877]
+surface_material_override/0 = ExtResource("5_s0vmy")
+
+[node name="lateral_001" parent="cuerpo" index="4" unique_id=367560499]
+surface_material_override/0 = ExtResource("5_s0vmy")
+
+[node name="recipiente" parent="cuerpo" index="5" unique_id=1431845880]
+surface_material_override/0 = ExtResource("2_k540r")
+
+[node name="rellenoRecipiente" parent="cuerpo" index="6" unique_id=1305687506]
+surface_material_override/0 = ExtResource("4_dulyy")

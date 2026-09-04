@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://mw57l0324amw"]
+
+[ext_resource type="PackedScene" uid="uid://cdakkbm62pgti" path="res://modelos/glb/mufla.glb" id="1_axrd7"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_0v6xc"]
+[ext_resource type="Material" uid="uid://cfn6cvk5yw6xe" path="res://materiales_mios/aluminio.tres" id="3_tqmra"]
+[ext_resource type="Material" uid="uid://i2droclu3jhf" path="res://materiales_mios/pasta_blanco.tres" id="4_yjekm"]
+[ext_resource type="Texture2D" uid="uid://hwe62rstc18u" path="res://materiales_mios/pantalla_mufla.png" id="5_b0xjq"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="6_uu4o5"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="7_awliw"]
+[ext_resource type="Script" uid="uid://bxpyjesqopki0" path="res://scripts_ui/identificacion.gd" id="8_1m5r1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0xjq"]
+albedo_texture = ExtResource("5_b0xjq")
+roughness = 0.15
+
+[sub_resource type="Resource" id="Resource_tv4qm"]
+script = ExtResource("7_awliw")
+nombre = "Horno mufla"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_o7jb7"]
+size = Vector3(0.3, 0.25, 0.1)
+
+[sub_resource type="Resource" id="Resource_vgm4n"]
+script = ExtResource("7_awliw")
+nombre = "Horno mufla"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yjekm"]
+size = Vector3(0.4, 0.5, 0.45)
+
+[node name="mufla" unique_id=1172322243 instance=ExtResource("1_axrd7")]
+script = ExtResource("2_0v6xc")
+puertas = Array[String]([""])
+
+[node name="Exterior" parent="." index="0" unique_id=1186968137]
+surface_material_override/0 = ExtResource("3_tqmra")
+
+[node name="Interior" parent="Exterior" index="0" unique_id=1366607185]
+surface_material_override/0 = ExtResource("4_yjekm")
+
+[node name="Pantalla" parent="Exterior" index="1" unique_id=1126625187]
+surface_material_override/0 = SubResource("StandardMaterial3D_b0xjq")
+
+[node name="Puerta" parent="." index="1" unique_id=665690937]
+surface_material_override/0 = ExtResource("3_tqmra")
+
+[node name="Dentro" parent="Puerta" index="0" unique_id=1284628594]
+surface_material_override/0 = ExtResource("4_yjekm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Puerta" index="1" unique_id=150669580]
+script = ExtResource("6_uu4o5")
+info = SubResource("Resource_tv4qm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Puerta/StaticBody3D" index="0" unique_id=634121041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0.05)
+shape = SubResource("BoxShape3D_o7jb7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="3" unique_id=1073820434]
+script = ExtResource("8_1m5r1")
+info = SubResource("Resource_vgm4n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=45328530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.23, 0)
+shape = SubResource("BoxShape3D_yjekm")

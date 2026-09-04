@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://b41hl6cnycvok"]
+
+[ext_resource type="PackedScene" uid="uid://dkxcgamocunlj" path="res://modelos_importados/led_lamp.glb" id="1_f4u5o"]
+[ext_resource type="Material" uid="uid://dpnw3ji1et3bt" path="res://materiales_mios/luz.tres" id="2_go5wg"]
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_2d3bx"]
+_surfaces = [{
+"aabb": AABB(-0.9896933, 0.006922975, -0.9896933, 1.9793866, 1e-05, 1.9793866),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 255, 255, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_go5wg"]
+resource_name = "Sketchfab_Scene_Object_1"
+_surfaces = [{
+"aabb": AABB(-0.9896933, 0.006922975, -0.9896933, 1.9793866, 1e-05, 1.9793866),
+"attribute_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 255, 255, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 0),
+"material": ExtResource("2_go5wg"),
+"name": "Material.002",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 255, 255, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 255, 255, 255, 191, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127, 0, 0, 255, 127)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_2d3bx")
+
+[node name="Sketchfab_Scene" unique_id=1142046592 instance=ExtResource("1_f4u5o")]
+
+[node name="Object_5" parent="Sketchfab_model/root/GLTF_SceneRootNode/Plane_0" parent_id_path=PackedInt32Array(1013594974) index="1" unique_id=348720168]
+mesh = SubResource("ArrayMesh_go5wg")

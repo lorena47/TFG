@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://dh54j8rlyn4qi"]
+
+[ext_resource type="Script" uid="uid://c4myykypl2eg0" path="res://scripts_sistemas/recipiente.gd" id="1_5b1g5"]
+[ext_resource type="PackedScene" uid="uid://bxwb0l7rhyriw" path="res://modelos/glb/erlenmeyer.glb" id="1_snl6s"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_hyou1"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_kf5ke"]
+
+[sub_resource type="Resource" id="Resource_tvctw"]
+script = ExtResource("2_kf5ke")
+nombre = "Matraz Erlenmeyer"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kf5ke"]
+size = Vector3(0.15, 0.28, 0.15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kf5ke"]
+transparency = 1
+vertex_color_use_as_albedo = true
+roughness = 0.03
+
+[sub_resource type="SphereMesh" id="SphereMesh_o4ntn"]
+material = SubResource("StandardMaterial3D_kf5ke")
+radius = 0.03
+height = 0.06
+
+[node name="erlenmeyer" type="Node3D" unique_id=1792732694]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=309544874]
+script = ExtResource("1_5b1g5")
+fluido = true
+deforme = true
+CANTIDAD_MAXIMA_CONTENIDO = 0.0
+CANTIDAD_MAXIMA_LIQUIDO = 10.0
+info = SubResource("Resource_tvctw")
+desplazamiento_mano = Vector3(0, -0.1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=13116608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0)
+shape = SubResource("BoxShape3D_kf5ke")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1432979392 instance=ExtResource("1_snl6s")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=2083747852]
+surface_material_override/0 = ExtResource("2_hyou1")
+
+[node name="base" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=1131354066]
+visible = false
+
+[node name="liquido" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=1337957567]
+visible = false
+
+[node name="particulas" type="CPUParticles3D" parent="RigidBody3D" unique_id=1391500272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2706875, 0)
+emitting = false
+amount = 6
+lifetime = 0.5
+randomness = 1.0
+mesh = SubResource("SphereMesh_o4ntn")
+emission_shape = 1
+emission_sphere_radius = 0.02
+gravity = Vector3(0, 9.8, 0)
+
+[editable path="RigidBody3D/modelo"]

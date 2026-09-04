@@ -1,0 +1,1249 @@
+[gd_scene format=3 uid="uid://maqph2mvltk2"]
+
+[ext_resource type="PackedScene" uid="uid://d0k4ythb10wao" path="res://fpv.tscn" id="1_k1hhi"]
+[ext_resource type="Script" uid="uid://d38ulk5yexmih" path="res://scripts_ui/ui.gd" id="2_dtq0o"]
+[ext_resource type="PackedScene" uid="uid://wbwmc1oa4dv5" path="res://menu.tscn" id="2_f62ts"]
+[ext_resource type="Texture2D" uid="uid://b3fbj7l0equ3u" path="res://paisaje.jpg" id="5_ekyc5"]
+[ext_resource type="Texture2D" uid="uid://e7et515ev64f" path="res://materiales_ui/candado.png" id="6_0m38j"]
+[ext_resource type="PackedScene" uid="uid://do52gja1c80an" path="res://escenas/blender_habitacion.tscn" id="6_7iern"]
+[ext_resource type="Script" uid="uid://bixfjouioun0r" path="res://scripts_ui/instrucciones.gd" id="6_es1ty"]
+[ext_resource type="PackedScene" uid="uid://ivm1t68f83c" path="res://escenas/extraido_mesa.tscn" id="7_fxq2u"]
+[ext_resource type="Texture2D" uid="uid://lbg3yvdwwipd" path="res://materiales_ui/tick.png" id="7_g8moj"]
+[ext_resource type="Script" uid="uid://cly1ry7ovnl" path="res://scripts_ui/lista_pasos.gd" id="7_lfexr"]
+[ext_resource type="Script" uid="uid://ltaa4l6gg03u" path="res://scripts_ui/errores.gd" id="8_2kfut"]
+[ext_resource type="PackedScene" uid="uid://7w8u1rou4t5k" path="res://escenas/blender_estufa.tscn" id="8_cejd5"]
+[ext_resource type="Texture2D" uid="uid://cuxluhm85pkro" path="res://iconos/flecha_izq.png" id="8_qfy1x"]
+[ext_resource type="LabelSettings" uid="uid://dmggtgu6j032e" path="res://materiales_mios/fuente.tres" id="9_f62ts"]
+[ext_resource type="Texture2D" uid="uid://d5fv3r3ithi8" path="res://materiales_ui/aviso.png" id="9_g8moj"]
+[ext_resource type="Texture2D" uid="uid://blh4lqy75amo5" path="res://iconos/flecha_dch.png" id="9_nmltq"]
+[ext_resource type="FontFile" uid="uid://cjnm0hwm1um5o" path="res://materiales_ui/DancingScript-Variable.ttf" id="9_va3pj"]
+[ext_resource type="PackedScene" uid="uid://dwxdyk3v2afwj" path="res://escenas/blender_espectrometro.tscn" id="10_1xq5o"]
+[ext_resource type="PackedScene" uid="uid://mw57l0324amw" path="res://escenas/blender_mufla.tscn" id="10_pa56l"]
+[ext_resource type="Theme" uid="uid://d0w6oflpgd1rx" path="res://materiales_mios/fuente_rich.tres" id="10_va3pj"]
+[ext_resource type="Texture2D" uid="uid://dgkkbnk77sviu" path="res://materiales_ui/papel.png" id="11_3xwql"]
+[ext_resource type="Script" uid="uid://blorac6m6x2er" path="res://scripts_ui/cuaderno.gd" id="11_5daf5"]
+[ext_resource type="Texture2D" uid="uid://carf4h8kumx8h" path="res://iconos/tecla_a.png" id="11_hkemj"]
+[ext_resource type="PackedScene" uid="uid://jtgp0ydfasay" path="res://escenas/blender_desecador.tscn" id="11_ufai3"]
+[ext_resource type="Texture2D" uid="uid://jjubyhdiehkx" path="res://iconos/tecla_w.png" id="12_3xwql"]
+[ext_resource type="PackedScene" uid="uid://bu2kv3mlnnt4w" path="res://escenas/blender_hplc.tscn" id="12_cejd5"]
+[ext_resource type="PackedScene" uid="uid://c57xd18hh1npb" path="res://escenas/extraido_ordenador.tscn" id="13_dtq0o"]
+[ext_resource type="Texture2D" uid="uid://ce7cd06f70h0x" path="res://iconos/tecla_s.png" id="13_y1y5n"]
+[ext_resource type="PackedScene" uid="uid://q3wpx1yne7wc" path="res://escenas/extraido_silla.tscn" id="14_2fd2d"]
+[ext_resource type="PackedScene" uid="uid://dtvo7dy8rbh2w" path="res://escenas/extraido_puesto.tscn" id="15_kuugj"]
+[ext_resource type="PackedScene" uid="uid://rln5bl4l7hr6" path="res://escenas/blender_extractor.tscn" id="16_k674e"]
+[ext_resource type="Texture2D" uid="uid://csss7owfnj0gw" path="res://iconos/flechas_scroll.png" id="19_u33b6"]
+[ext_resource type="PackedScene" uid="uid://bij28r6yiad7u" path="res://escenas/blender_sala2.tscn" id="20_ybe0x"]
+[ext_resource type="PackedScene" uid="uid://luhrmyumlxra" path="res://escenas/extraido_centrifugadora.tscn" id="21_pjhkh"]
+[ext_resource type="PackedScene" uid="uid://d4gpdwetp4l75" path="res://escenas/extraido_taburete.tscn" id="22_asu1p"]
+[ext_resource type="PackedScene" uid="uid://crkhs7lbv6va3" path="res://escenas/blender_microondas.tscn" id="22_dh4wf"]
+[ext_resource type="Texture2D" uid="uid://cw6qchx7kx5su" path="res://iconos/tecla_m.png" id="22_nmltq"]
+[ext_resource type="PackedScene" uid="uid://dathogjyoiybn" path="res://escenas/blender_bureta.tscn" id="24_c441i"]
+[ext_resource type="PackedScene" uid="uid://dphrouo42125" path="res://escenas/blender_matraz.tscn" id="25_l331c"]
+[ext_resource type="PackedScene" uid="uid://ckoqyum456sxg" path="res://escenas/blender_embudo.tscn" id="26_165m4"]
+[ext_resource type="PackedScene" uid="uid://das0tf505cmbc" path="res://escenas/blender_vitrinaFregadero.tscn" id="27_xax4w"]
+[ext_resource type="PackedScene" uid="uid://dsuf1kcaudv5r" path="res://escenas/blender_pipeta.tscn" id="27_ybe0x"]
+[ext_resource type="PackedScene" uid="uid://0cvl1ga0nvay" path="res://escenas/blender_centrifuga.tscn" id="28_2erit"]
+[ext_resource type="PackedScene" uid="uid://bfltf03by44vt" path="res://escenas/blender_bala.tscn" id="28_6opp8"]
+[ext_resource type="PackedScene" uid="uid://s8yrctg5csv0" path="res://escenas/blender_pipeteador.tscn" id="28_pgymd"]
+[ext_resource type="PackedScene" uid="uid://broga4w1k3r1a" path="res://escenas/blender_probeta.tscn" id="29_2erit"]
+[ext_resource type="PackedScene" uid="uid://bc5da15gcax2i" path="res://escenas/importado_pizarra.tscn" id="30_dh4wf"]
+[ext_resource type="PackedScene" uid="uid://bgdbmjmxtq6j3" path="res://escenas/blender_acidoSulfurico.tscn" id="30_hhfpm"]
+[ext_resource type="PackedScene" uid="uid://dqswwu7m1twpc" path="res://escenas/extraido_bancada.tscn" id="30_pgymd"]
+[ext_resource type="PackedScene" uid="uid://d0c1ko7px6yaf" path="res://escenas/importado_ventana.tscn" id="31_6opp8"]
+[ext_resource type="PackedScene" uid="uid://c1ds2sa7pjail" path="res://escenas/blender_dispensador.tscn" id="31_cigky"]
+[ext_resource type="PackedScene" uid="uid://b41hl6cnycvok" path="res://escenas/importado_lamparaLed.tscn" id="32_es1ty"]
+[ext_resource type="PackedScene" uid="uid://cukxix6hoollb" path="res://escenas/blender_techo.tscn" id="32_fbyge"]
+[ext_resource type="PackedScene" uid="uid://ks4ci0meas46" path="res://escenas/blender_vitrina.tscn" id="33_7iern"]
+[ext_resource type="PackedScene" uid="uid://1k8e2g4ww8cw" path="res://escenas/blender_torre.tscn" id="33_ufai3"]
+[ext_resource type="PackedScene" uid="uid://gpm7pgfkcsjl" path="res://escenas/blender_digestor.tscn" id="34_1xq5o"]
+[ext_resource type="PackedScene" uid="uid://bhv03br4f6wwi" path="res://escenas/blender_destilador.tscn" id="34_pa56l"]
+[ext_resource type="PackedScene" uid="uid://boc6sgjac0abd" path="res://escenas/blender_minihabitacion.tscn" id="34_x6jt7"]
+[ext_resource type="PackedScene" uid="uid://duftv1mk4j83g" path="res://escenas/blender_lector.tscn" id="35_43oxb"]
+[ext_resource type="PackedScene" uid="uid://bela73dr3np1j" path="res://escenas/blender_armarioQuimicos.tscn" id="35_cejd5"]
+[ext_resource type="PackedScene" uid="uid://bdnuiy22nnt3c" path="res://escenas/blender_armario.tscn" id="35_dtq0o"]
+[ext_resource type="PackedScene" uid="uid://b4bsanvohex31" path="res://escenas/blender_mesaAntivibraciones.tscn" id="35_ekyc5"]
+[ext_resource type="PackedScene" uid="uid://gqg0upaftgm2" path="res://escenas/blender_pasillo.tscn" id="35_f08nu"]
+[ext_resource type="PackedScene" uid="uid://b02ok8n7x0me8" path="res://escenas/blender_espatula.tscn" id="36_2fd2d"]
+[ext_resource type="PackedScene" uid="uid://duo62mx51oln0" path="res://escenas/blender_espectrofotometro.tscn" id="36_dtq0o"]
+[ext_resource type="PackedScene" uid="uid://c1meek383g1os" path="res://escenas/blender_muestraMolida.tscn" id="37_dtq0o"]
+[ext_resource type="PackedScene" uid="uid://qu2ekmeu4fq8" path="res://escenas/blender_barquilla.tscn" id="37_kuugj"]
+[ext_resource type="PackedScene" uid="uid://b1j28g67truxk" path="res://escenas/blender_tubo.tscn" id="38_k674e"]
+[ext_resource type="PackedScene" uid="uid://c461bld8e8egq" path="res://escenas/blender_vasoPrecipitado.tscn" id="39_mtv8m"]
+[ext_resource type="PackedScene" uid="uid://cfp7lbb46a25k" path="res://escenas/blender_balanza.tscn" id="39_pa56l"]
+[ext_resource type="PackedScene" uid="uid://blyu7q0qmfsu3" path="res://escenas/blender_balanzaAntivibraciones.tscn" id="39_ufai3"]
+[ext_resource type="PackedScene" uid="uid://jdbkhr7qv5jq" path="res://escenas/blender_perlasVidrio.tscn" id="41_h3abv"]
+[ext_resource type="PackedScene" uid="uid://dh54j8rlyn4qi" path="res://escenas/blender_erlenmeyer.tscn" id="42_l331c"]
+[ext_resource type="PackedScene" uid="uid://badyhvseg87hh" path="res://escenas/blender_agua.tscn" id="45_pjhkh"]
+[ext_resource type="PackedScene" uid="uid://cs77m3iasjf7c" path="res://escenas/blender_acidoBorico.tscn" id="46_nra2v"]
+[ext_resource type="PackedScene" uid="uid://b00kw68uvgquj" path="res://escenas/blender_rojoMetilo.tscn" id="47_c441i"]
+[ext_resource type="PackedScene" uid="uid://bfywwgkeojcxy" path="res://escenas/blender_catalizador.tscn" id="48_c441i"]
+[ext_resource type="PackedScene" uid="uid://b8uve33xu6mf6" path="res://escenas/blender_acidoClorhidrico.tscn" id="50_165m4"]
+[ext_resource type="PackedScene" uid="uid://cf0aec70nf2dw" path="res://escenas/blender_crisol.tscn" id="52_va3pj"]
+[ext_resource type="PackedScene" uid="uid://dmi4tuwq71eo" path="res://escenas/blender_pesafiltros.tscn" id="53_5daf5"]
+[ext_resource type="Texture2D" uid="uid://c6jesp851bu83" path="res://iconos/tecla_d.png" id="73_0m38j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_va3pj"]
+bg_color = Color(0.9607843, 0.8509804, 0.28627452, 1)
+shadow_color = Color(0, 0, 0, 0.39215687)
+shadow_size = 3
+shadow_offset = Vector2(4, 6)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_va3pj"]
+load_path = "res://.godot/imported/cinta.png-97ed3cc0926da5e13071488ca90ef2b7.ctex"
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3xwql"]
+bg_color = Color(1, 1, 1, 0.34901962)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.47843137, 0.35686275, 0.07058824, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5daf5"]
+bg_color = Color(0.99215686, 0.9647059, 0.9411765, 1)
+border_width_left = 5
+border_color = Color(0.8509804, 0.30980393, 0.23921569, 1)
+shadow_color = Color(0, 0, 0, 0.47058824)
+shadow_size = 2
+shadow_offset = Vector2(2, 3)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hkemj"]
+bg_color = Color(0, 0, 0, 0.15686275)
+
+[sub_resource type="FontVariation" id="FontVariation_3xwql"]
+variation_embolden = 0.5
+
+[sub_resource type="LabelSettings" id="LabelSettings_hkemj"]
+font_size = 20
+font_color = Color(0, 0, 0, 1)
+outline_size = 4
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_a8frf"]
+panorama = ExtResource("5_ekyc5")
+
+[sub_resource type="Sky" id="Sky_nbs3k"]
+sky_material = SubResource("PanoramaSkyMaterial_a8frf")
+
+[sub_resource type="Environment" id="Environment_a8frf"]
+background_mode = 2
+background_color = Color(0.9471994, 0.9471994, 0.9471994, 1)
+background_energy_multiplier = 1.5
+sky = SubResource("Sky_nbs3k")
+ambient_light_source = 2
+ambient_light_color = Color(0.9490196, 0.9490196, 0.9490196, 0.9490196)
+tonemap_exposure = 0.8
+ssr_enabled = true
+ssr_max_steps = 32
+sdfgi_enabled = true
+sdfgi_use_occlusion = true
+
+[node name="Node3D" type="Node3D" unique_id=515634586]
+
+[node name="fpv" parent="." unique_id=1660382107 instance=ExtResource("1_k1hhi")]
+transform = Transform3D(-0.5, 0, 0.8660253, 0, 1, 0, -0.8660253, 0, -0.5, 4.2, 0.3, -2.3)
+
+[node name="menu" type="CanvasLayer" parent="." unique_id=215754604]
+process_mode = 3
+layer = 2
+
+[node name="Menu" parent="menu" unique_id=1190115816 instance=ExtResource("2_f62ts")]
+process_mode = 3
+
+[node name="ui" type="CanvasLayer" parent="." unique_id=258963591]
+script = ExtResource("2_dtq0o")
+
+[node name="puntero" type="Label" parent="ui" unique_id=2100503052]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -24.5
+offset_right = 20.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "·"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Instrucciones" type="Control" parent="ui" unique_id=1601278244]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 875.0
+offset_top = 27.0
+offset_right = 925.0
+offset_bottom = 67.0
+script = ExtResource("6_es1ty")
+
+[node name="Postit" type="Panel" parent="ui/Instrucciones" unique_id=94643537]
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 416.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_va3pj")
+
+[node name="Cinta" type="TextureRect" parent="ui/Instrucciones" unique_id=1697885254]
+layout_mode = 0
+offset_left = 75.0
+offset_top = -15.0
+offset_right = 175.0
+offset_bottom = 25.0
+texture = SubResource("CompressedTexture2D_va3pj")
+expand_mode = 1
+
+[node name="Paginador" type="HBoxContainer" parent="ui/Instrucciones" unique_id=283161018]
+layout_mode = 0
+offset_top = 22.0
+offset_right = 260.0
+offset_bottom = 47.0
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="Izquierda" type="Label" parent="ui/Instrucciones/Paginador" unique_id=1660944922]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0.35686275, 0.07058824, 1)
+theme_override_font_sizes/font_size = 16
+text = "<"
+
+[node name="Numero" type="Label" parent="ui/Instrucciones/Paginador" unique_id=301263039]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0.35686275, 0.07058824, 1)
+theme_override_font_sizes/font_size = 16
+text = "N/M"
+
+[node name="Derecha" type="Label" parent="ui/Instrucciones/Paginador" unique_id=1213982224]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.47843137, 0.35686275, 0.07058824, 1)
+theme_override_font_sizes/font_size = 16
+text = ">"
+
+[node name="Hito" type="Label" parent="ui/Instrucciones" unique_id=1285975009]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 260.0
+offset_bottom = 74.0
+theme_override_colors/font_color = Color(0.47843137, 0.35686275, 0.07058824, 1)
+theme_override_font_sizes/font_size = 17
+text = "HITO N"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ListaPasos" type="VBoxContainer" parent="ui/Instrucciones" unique_id=381340086]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_lfexr")
+
+[node name="FilaPendiente" type="HBoxContainer" parent="ui/Instrucciones" unique_id=165600772]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 2.2250001
+anchor_right = 0.6
+anchor_bottom = 2.2250001
+offset_right = 178.0
+offset_bottom = 413.0
+theme_override_constants/separation = 12
+
+[node name="Casilla" type="Panel" parent="ui/Instrucciones/FilaPendiente" unique_id=882185099]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3xwql")
+
+[node name="Margen" type="MarginContainer" parent="ui/Instrucciones/FilaPendiente" unique_id=2077392057]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/margin_top = -3
+
+[node name="Descripcion" type="Label" parent="ui/Instrucciones/FilaPendiente/Margen" unique_id=609689303]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.2901961, 0.23137255, 0.03137255, 1)
+theme_override_font_sizes/font_size = 13
+text = "Instrucción hito"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="FilaBloqueada" type="HBoxContainer" parent="ui/Instrucciones" unique_id=1208671038]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 2.825
+anchor_right = 0.6
+anchor_bottom = 2.825
+offset_right = 178.0
+offset_bottom = 413.0
+theme_override_constants/separation = 12
+
+[node name="Casilla" type="TextureRect" parent="ui/Instrucciones/FilaBloqueada" unique_id=1565177536]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("6_0m38j")
+expand_mode = 1
+
+[node name="Margen" type="MarginContainer" parent="ui/Instrucciones/FilaBloqueada" unique_id=1308531243]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/margin_top = -3
+
+[node name="Descripcion" type="Label" parent="ui/Instrucciones/FilaBloqueada/Margen" unique_id=1608175734]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.57254905, 0.5372549, 0.4117647, 1)
+theme_override_font_sizes/font_size = 13
+text = "Instrucción hito"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="FilaCompletada" type="HBoxContainer" parent="ui/Instrucciones" unique_id=1677266149]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.6
+anchor_top = 3.4750001
+anchor_right = 0.6
+anchor_bottom = 3.4750001
+offset_right = 178.0
+offset_bottom = 413.0
+theme_override_constants/separation = 12
+
+[node name="Casilla" type="TextureRect" parent="ui/Instrucciones/FilaCompletada" unique_id=1477669455]
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture = ExtResource("7_g8moj")
+expand_mode = 1
+
+[node name="Margen" type="MarginContainer" parent="ui/Instrucciones/FilaCompletada" unique_id=937258596]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/margin_top = -3
+
+[node name="Texto" type="RichTextLabel" parent="ui/Instrucciones/FilaCompletada/Margen" unique_id=976330452]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.5411765, 0.47843137, 0.2901961, 1)
+theme_override_font_sizes/normal_font_size = 13
+bbcode_enabled = true
+text = "[s]Instrucción hito[/s]"
+fit_content = true
+scroll_active = false
+vertical_alignment = 1
+
+[node name="FlechaIzq" type="Sprite2D" parent="ui/Instrucciones" unique_id=1279278764]
+position = Vector2(50, 50)
+scale = Vector2(0.125, 0.132)
+texture = ExtResource("8_qfy1x")
+
+[node name="FlechaDch" type="Sprite2D" parent="ui/Instrucciones" unique_id=1332470248]
+position = Vector2(210.99998, 50)
+scale = Vector2(0.132, 0.132)
+texture = ExtResource("9_nmltq")
+
+[node name="Errores" type="Control" parent="ui" unique_id=10961266]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 875.0
+offset_top = 460.0
+offset_right = 915.0
+offset_bottom = 500.0
+script = ExtResource("8_2kfut")
+ruta_nota = NodePath("../Instrucciones")
+
+[node name="Panel" type="Panel" parent="ui/Errores" unique_id=1528137792]
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 140.0
+pivot_offset = Vector2(260, 120)
+theme_override_styles/panel = SubResource("StyleBoxFlat_5daf5")
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/Errores" unique_id=84746335]
+layout_mode = 0
+offset_right = 260.0
+offset_bottom = 140.0
+pivot_offset = Vector2(260, 140)
+theme_override_constants/margin_left = 14
+theme_override_constants/margin_top = 14
+theme_override_constants/margin_right = 14
+theme_override_constants/margin_bottom = 14
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ui/Errores/MarginContainer" unique_id=1608655868]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/Errores/MarginContainer/ScrollContainer" unique_id=1837438540]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="ui/Errores/MarginContainer/ScrollContainer/VBoxContainer" unique_id=268914649]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72156864, 0.6627451, 0.6039216, 1)
+theme_override_font_sizes/font_size = 13
+text = "Sin errores."
+autowrap_mode = 3
+
+[node name="FilaError" type="HBoxContainer" parent="ui/Errores" unique_id=1136287941]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 7
+
+[node name="Icono" type="TextureRect" parent="ui/Errores/FilaError" unique_id=696367995]
+modulate = Color(0.83137256, 0.18039216, 0.18039216, 1)
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("9_g8moj")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="ui/Errores/FilaError" unique_id=1787220394]
+custom_minimum_size = Vector2(1, 0)
+layout_mode = 2
+
+[node name="Texto" type="Label" parent="ui/Errores/FilaError" unique_id=1656482021]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.47843137, 0.18039216, 0.13333334, 1)
+theme_override_font_sizes/font_size = 13
+autowrap_mode = 3
+
+[node name="apuntado" type="Label" parent="ui" unique_id=341030465]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.03
+anchor_right = 0.5
+anchor_bottom = 0.03
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 28.0
+grow_horizontal = 2
+label_settings = ExtResource("9_f62ts")
+horizontal_alignment = 1
+
+[node name="acciones" type="RichTextLabel" parent="ui" unique_id=272867791]
+anchors_preset = -1
+anchor_top = 0.03
+anchor_bottom = 0.03
+offset_left = 19.44
+offset_right = 381.44
+offset_bottom = 23.000004
+theme = ExtResource("10_va3pj")
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/line_separation = 12
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/normal_font_size = 20
+fit_content = true
+scroll_active = false
+
+[node name="Cuaderno" type="Control" parent="ui" unique_id=2111767452]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_5daf5")
+
+[node name="Fondo" type="ColorRect" parent="ui/Cuaderno" unique_id=1206700256]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.27450982)
+
+[node name="Papel" type="Control" parent="ui/Cuaderno" unique_id=1029173636]
+layout_mode = 1
+anchor_left = 0.25
+anchor_top = 0.2
+anchor_right = 0.75
+anchor_bottom = 0.8
+
+[node name="Sombra" type="Panel" parent="ui/Cuaderno/Papel" unique_id=997628266]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 6.0
+offset_bottom = 7.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_hkemj")
+
+[node name="Textura" type="TextureRect" parent="ui/Cuaderno/Papel" unique_id=613000031]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("11_3xwql")
+expand_mode = 1
+
+[node name="Anillas" type="Label" parent="ui/Cuaderno/Papel" unique_id=714578796]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_top = -16.0
+offset_bottom = 20.0
+theme_override_colors/font_color = Color(0.5411765, 0.5411765, 0.5411765, 1)
+theme_override_fonts/font = SubResource("FontVariation_3xwql")
+theme_override_font_sizes/font_size = 23
+text = "c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c c "
+horizontal_alignment = 1
+
+[node name="Contenido" type="VBoxContainer" parent="ui/Cuaderno/Papel" unique_id=1376034201]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 34.0
+offset_right = -26.0
+offset_bottom = -22.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Titulo" type="RichTextLabel" parent="ui/Cuaderno/Papel/Contenido" unique_id=1640012955]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/normal_font = ExtResource("9_va3pj")
+theme_override_font_sizes/normal_font_size = 32
+bbcode_enabled = true
+text = "[u]Recipiente[/u]"
+fit_content = true
+scroll_active = false
+
+[node name="Scroll" type="ScrollContainer" parent="ui/Cuaderno/Papel/Contenido" unique_id=736541780]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Lista" type="Label" parent="ui/Cuaderno/Papel/Contenido/Scroll" unique_id=2070109848]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.2901961, 0.2901961, 0.2901961, 1)
+theme_override_fonts/font = ExtResource("9_va3pj")
+theme_override_font_sizes/font_size = 26
+text = "- Sustancia"
+autowrap_mode = 3
+
+[node name="ButtonCerrar" type="Button" parent="ui/Cuaderno/Papel" unique_id=550855905]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_top = 2.0
+offset_right = -4.0
+offset_bottom = 40.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.7529412, 0.22352941, 0.16862746, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 34
+text = "x"
+flat = true
+
+[node name="TeclaA" type="Sprite2D" parent="ui" unique_id=1850148335]
+position = Vector2(35, 586)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("11_hkemj")
+
+[node name="TeclaW" type="Sprite2D" parent="ui" unique_id=1539309289]
+position = Vector2(80, 541)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("12_3xwql")
+
+[node name="TeclaS" type="Sprite2D" parent="ui" unique_id=1128251100]
+position = Vector2(80, 586)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("13_y1y5n")
+
+[node name="TeclaD" type="Sprite2D" parent="ui" unique_id=1962794325]
+position = Vector2(125, 586)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("73_0m38j")
+
+[node name="FlechasScroll" type="Sprite2D" parent="ui" unique_id=1180677890]
+position = Vector2(236, 564)
+scale = Vector2(0.24755858, 0.2543945)
+texture = ExtResource("19_u33b6")
+
+[node name="Menu" type="Label" parent="ui" unique_id=1834743805]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 271.0
+offset_top = 610.0
+offset_right = 423.0
+offset_bottom = 652.0
+text = "Menú"
+label_settings = SubResource("LabelSettings_hkemj")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Scroll" type="Label" parent="ui" unique_id=2045290492]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 161.0
+offset_top = 610.0
+offset_right = 313.0
+offset_bottom = 652.0
+text = "Scrollear"
+label_settings = SubResource("LabelSettings_hkemj")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Mover" type="Label" parent="ui" unique_id=1665391193]
+custom_minimum_size = Vector2(100, 0)
+offset_left = 6.0
+offset_top = 610.0
+offset_right = 158.0
+offset_bottom = 652.0
+text = "Mover jugador"
+label_settings = SubResource("LabelSettings_hkemj")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="TeclaM" type="Sprite2D" parent="ui" unique_id=1896013284]
+position = Vector2(348, 584)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("22_nmltq")
+
+[node name="laboratorio" type="Node3D" parent="." unique_id=731412072]
+
+[node name="sala3" parent="laboratorio" unique_id=1492977377 instance=ExtResource("6_7iern")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, -13)
+
+[node name="mesas" type="Node3D" parent="laboratorio/sala3" unique_id=1404530813]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.921, 0, -0.605)
+
+[node name="mesa1" parent="laboratorio/sala3/mesas" unique_id=1502232895 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, -2.8699996, 0, 0)
+
+[node name="mesa2" parent="laboratorio/sala3/mesas" unique_id=1943777931 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 2.3841858e-07, 0, 0)
+
+[node name="espectrometro" parent="laboratorio/sala3/mesas/mesa2" unique_id=276900189 instance=ExtResource("10_1xq5o")]
+transform = Transform3D(-1.3113415e-09, 0, 0.03, 0, 0.03, 0, -0.03, 0, -1.3113415e-09, 0.045, 0.058, 0.1)
+
+[node name="ordenador" parent="laboratorio/sala3/mesas/mesa2" unique_id=509013180 instance=ExtResource("13_dtq0o")]
+transform = Transform3D(-0.99999994, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.99999994, 0.04, 0.058, 0)
+
+[node name="silla" parent="laboratorio/sala3/mesas/mesa2" unique_id=400577604 instance=ExtResource("14_2fd2d")]
+transform = Transform3D(1.1817693, 0, -0.20837782, 0, 1.2, 0, 0.20837782, 0, 1.1817693, 0.092999995, 0, 0.00038395636)
+
+[node name="torre" parent="laboratorio/sala3/mesas/mesa2" unique_id=1359304936 instance=ExtResource("33_ufai3")]
+transform = Transform3D(-0.7, 0, -6.119595e-08, 0, 0.7, 0, 6.119595e-08, 0, -0.7, 0.035, 0.058, -0.035)
+
+[node name="mesa3" parent="laboratorio/sala3/mesas" unique_id=2060077219 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 2.8650002, 0, 0)
+
+[node name="ordenador" parent="laboratorio/sala3/mesas/mesa3" unique_id=501992132 instance=ExtResource("13_dtq0o")]
+transform = Transform3D(-0.99999994, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.99999994, 0.04, 0.058, 0.01)
+
+[node name="silla" parent="laboratorio/sala3/mesas/mesa3" unique_id=981412710 instance=ExtResource("14_2fd2d")]
+transform = Transform3D(1.1817693, 0, -0.20837782, 0, 1.2, 0, 0.20837782, 0, 1.1817693, 0.093, 0, 0.02)
+
+[node name="hplc" parent="laboratorio/sala3/mesas/mesa3" unique_id=1614403875 instance=ExtResource("12_cejd5")]
+transform = Transform3D(-6.556707e-10, 0, 0.015, 0, 0.015, 0, -0.015, 0, -6.556707e-10, 0.045, 0.058, -0.035)
+
+[node name="torre" parent="laboratorio/sala3/mesas/mesa3" unique_id=996080620 instance=ExtResource("33_ufai3")]
+transform = Transform3D(-0.7, 0, -6.119595e-08, 0, 0.7, 0, 6.119595e-08, 0, -0.7, 0.035, 0.058, 0.042)
+
+[node name="mesas2" type="Node3D" parent="laboratorio/sala3" unique_id=98331351]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.921, 0, -0.605)
+
+[node name="mesa1" parent="laboratorio/sala3/mesas2" unique_id=1827487059 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, -2.8699996, 0, 0)
+
+[node name="ordenador" parent="laboratorio/sala3/mesas2/mesa1" unique_id=369355538 instance=ExtResource("13_dtq0o")]
+transform = Transform3D(-0.99999994, 0, -8.742276e-08, 0, 1, 0, 8.742276e-08, 0, -0.99999994, 0.04, 0.058, 0.01)
+
+[node name="silla" parent="laboratorio/sala3/mesas2/mesa1" unique_id=1111348094 instance=ExtResource("14_2fd2d")]
+transform = Transform3D(1.1817693, 0, -0.20837782, 0, 1.2, 0, 0.20837782, 0, 1.1817693, 0.093, 0, 0.02)
+
+[node name="torre" parent="laboratorio/sala3/mesas2/mesa1" unique_id=663125438 instance=ExtResource("33_ufai3")]
+transform = Transform3D(-0.7, 0, -6.119595e-08, 0, 0.7, 0, 6.119595e-08, 0, -0.7, 0.035, 0.058, 0.042)
+
+[node name="lector" parent="laboratorio/sala3/mesas2/mesa1" unique_id=205794814 instance=ExtResource("35_43oxb")]
+transform = Transform3D(-8.7422786e-10, 0, 0.02, 0, 0.02, 0, -0.02, 0, -8.7422786e-10, 0.045000017, 0.058, -0.040570647)
+
+[node name="espectrofotometro" parent="laboratorio/sala3/mesas2/mesa1" unique_id=742195176 instance=ExtResource("36_dtq0o")]
+transform = Transform3D(-8.7422786e-10, 0, 0.02, 0, 0.02, 0, -0.02, 0, -8.7422786e-10, 0.050000012, 0.058, -0.09057063)
+
+[node name="mesa2" parent="laboratorio/sala3/mesas2" unique_id=386622617 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 2.3841858e-07, 0, 0)
+
+[node name="mesa3" parent="laboratorio/sala3/mesas2" unique_id=388168604 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 2.8650002, 0, 0)
+
+[node name="ordenador" parent="laboratorio/sala3/mesas2/mesa3" unique_id=1791172573 instance=ExtResource("13_dtq0o")]
+transform = Transform3D(-0.99999994, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -0.99999994, 0.04, 0.058, 0)
+
+[node name="silla" parent="laboratorio/sala3/mesas2/mesa3" unique_id=20969714 instance=ExtResource("14_2fd2d")]
+transform = Transform3D(1.1817693, 0, -0.20837781, 0, 1.2, 0, 0.20837781, 0, 1.1817693, 0.093, 0, 0)
+
+[node name="torre" parent="laboratorio/sala3/mesas2/mesa3" unique_id=1529610851 instance=ExtResource("33_ufai3")]
+transform = Transform3D(-0.7, 0, -6.119595e-08, 0, 0.7, 0, 6.119595e-08, 0, -0.7, 0.035, 0.058, -0.03)
+
+[node name="ventana1" parent="laboratorio/sala3" unique_id=976157762 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.808, 1.55, -5)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="laboratorio/sala3/ventana1" unique_id=1118482227]
+transform = Transform3D(0.31821525, -0.81834185, -0.47859758, 0.051170405, -0.48927742, 0.87062573, -0.9466365, -0.30153644, -0.11382066, -0.6646434, 1.9529936, 0.15734768)
+light_color = Color(0.9843281, 0.9778355, 0.89037704, 1)
+light_energy = 0.345
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 9.944
+spot_attenuation = -1.07
+spot_angle = 50.0
+spot_angle_attenuation = 0.8408954
+
+[node name="ventana3" parent="laboratorio/sala3" unique_id=1405033319 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.813, 1.55, -5)
+
+[node name="ventana4" parent="laboratorio/sala3" unique_id=438559489 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.83, 1.55, -5)
+
+[node name="ventana5" parent="laboratorio/sala3" unique_id=1094877121 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.159, 1.55, -5)
+
+[node name="ventana6" parent="laboratorio/sala3" unique_id=1899211342 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.147, 1.55, -5)
+
+[node name="techo" parent="laboratorio/sala3" unique_id=527988187 instance=ExtResource("32_fbyge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 5)
+
+[node name="leds" type="Node3D" parent="laboratorio/sala3/techo" unique_id=1785929168]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala3/techo/leds" unique_id=1142046592 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala3/techo/leds" unique_id=1080200476 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala3/techo/leds" unique_id=1523002242 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala3/techo/leds" unique_id=1555090665 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds2" type="Node3D" parent="laboratorio/sala3/techo" unique_id=1711335704]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala3/techo/leds2" unique_id=60100969 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala3/techo/leds2" unique_id=594788145 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala3/techo/leds2" unique_id=422680909 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala3/techo/leds2" unique_id=469936069 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds3" type="Node3D" parent="laboratorio/sala3/techo" unique_id=1447792433]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala3/techo/leds3" unique_id=430436899 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala3/techo/leds3" unique_id=19869007 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala3/techo/leds3" unique_id=666651229 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala3/techo/leds3" unique_id=555214011 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds4" type="Node3D" parent="laboratorio/sala3/techo" unique_id=126837363]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala3/techo/leds4" unique_id=1418326273 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala3/techo/leds4" unique_id=1337610448 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala3/techo/leds4" unique_id=829535303 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala3/techo/leds4" unique_id=1741933767 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="laboratorio/sala3/techo" unique_id=1478915153]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.371139e-09, -2, -5.1)
+blend_distance = 0.8
+size = Vector3(18, 7, 12)
+box_projection = true
+interior = true
+
+[node name="puesto1" parent="laboratorio/sala3" unique_id=106765328 instance=ExtResource("15_kuugj")]
+transform = Transform3D(-1, 0, 1.509958e-07, 0, 1, 0, -1.509958e-07, 0, -1, -1.504, 0, -1.731)
+
+[node name="taburete" parent="laboratorio/sala3/puesto1" unique_id=977230904 instance=ExtResource("22_asu1p")]
+transform = Transform3D(-22, 0, 3.3219073e-06, 0, 22, 0, -3.3219073e-06, 0, -22, -1.2199999, 0.099999994, -1.9800003)
+
+[node name="puesto2" parent="laboratorio/sala3" unique_id=1305582364 instance=ExtResource("15_kuugj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.504, 0, 0.09)
+
+[node name="taburete" parent="laboratorio/sala3/puesto2" unique_id=151125882 instance=ExtResource("22_asu1p")]
+transform = Transform3D(-22, 0, 3.3219076e-06, 0, 22, 0, -3.3219076e-06, 0, -22, -1.22, 0.094742954, -1.9800001)
+
+[node name="sala2" parent="laboratorio" unique_id=276262679 instance=ExtResource("20_ybe0x")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+
+[node name="derecha" type="Node3D" parent="laboratorio/sala2" unique_id=1393936562]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.921, 0, 0.45)
+
+[node name="mesa2" parent="laboratorio/sala2/derecha" unique_id=1481875489 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 0.16966417, 0, 0)
+
+[node name="microondas" parent="laboratorio/sala2/derecha/mesa2" unique_id=468738144 instance=ExtResource("22_dh4wf")]
+transform = Transform3D(-1.7484553e-09, 0, 0.04, 0, 0.04, 0, -0.04, 0, -1.7484553e-09, 0.038, 0.058, -0.045)
+
+[node name="desecador" parent="laboratorio/sala2/derecha/mesa2" unique_id=644139141 instance=ExtResource("11_ufai3")]
+transform = Transform3D(-4.3711386e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.3711386e-09, 0.045, 0.058, 0.01)
+
+[node name="mesa3" parent="laboratorio/sala2/derecha" unique_id=869929240 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, 3.04, 0, 0)
+
+[node name="mufla" parent="laboratorio/sala2/derecha/mesa3" unique_id=230522199 instance=ExtResource("10_pa56l")]
+transform = Transform3D(-4.371138e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371138e-09, 0.045, 0.058, 0.015)
+
+[node name="estufa" parent="laboratorio/sala2/derecha/mesa3" unique_id=2100627106 instance=ExtResource("8_cejd5")]
+transform = Transform3D(-4.371138e-09, 0, 0.1, 0, 0.1, 0, -0.1, 0, -4.371138e-09, 0.04, 0.058, -0.04)
+
+[node name="vitrina_fregadero" parent="laboratorio/sala2/derecha" unique_id=2023307729 instance=ExtResource("27_xax4w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.77, 0, 0.995)
+
+[node name="bala" parent="laboratorio/sala2/derecha/vitrina_fregadero" unique_id=1958983708 instance=ExtResource("28_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0050001144, 0, 0)
+
+[node name="dispensador" parent="laboratorio/sala2/derecha/vitrina_fregadero" unique_id=1130456258 instance=ExtResource("31_cigky")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -0.134, 1.18, 0.4)
+
+[node name="izquierda" type="Node3D" parent="laboratorio/sala2" unique_id=995047792]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -7.921, 0, 0.38)
+
+[node name="mesa2" parent="laboratorio/sala2/izquierda" unique_id=874864409 instance=ExtResource("7_fxq2u")]
+transform = Transform3D(-8.742278e-07, 0, -20, 0, 20, 0, 20, 0, -8.742278e-07, -0.2, 0, 0)
+
+[node name="destilador" parent="laboratorio/sala2/izquierda/mesa2" unique_id=456157424 instance=ExtResource("34_pa56l")]
+transform = Transform3D(-2.6226832e-09, 0, 0.06, 0, 0.06, 0, -0.06, 0, -2.6226832e-09, 0.055000007, 0.057, -0.033847235)
+
+[node name="centrifugadora" parent="laboratorio/sala2/izquierda/mesa2" unique_id=84096288 instance=ExtResource("21_pjhkh")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.045000017, 0.058, 0.00604322)
+
+[node name="centrifuga" parent="laboratorio/sala2/izquierda/mesa2" unique_id=370259791 instance=ExtResource("28_2erit")]
+transform = Transform3D(-5.6824806e-10, 0, 0.012999999, 0, 0.012999999, 0, -0.012999999, 0, -5.6824806e-10, 0.039696217, 0.058, 0.04469996)
+
+[node name="vitrina" parent="laboratorio/sala2/izquierda" unique_id=633944377 instance=ExtResource("33_7iern")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.763438, 0, 0.99500084)
+
+[node name="digestor" parent="laboratorio/sala2/izquierda/vitrina" unique_id=1446422361 instance=ExtResource("34_1xq5o")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 1.15, 0.4)
+
+[node name="puesto1" parent="laboratorio/sala2" unique_id=954235413 instance=ExtResource("30_pgymd")]
+transform = Transform3D(-1, 0, -8.742277e-08, 0, 1, 0, 8.742277e-08, 0, -1, -1.504, 0, -2.5108643)
+
+[node name="taburete" parent="laboratorio/sala2/puesto1" unique_id=863021720 instance=ExtResource("22_asu1p")]
+transform = Transform3D(-22, 0, 8.567116e-06, 0, 22, 0, -8.567116e-06, 0, -22, -1.2199994, 0.099999994, -1.9800006)
+
+[node name="extractor" parent="laboratorio/sala2/puesto1" unique_id=2014115437 instance=ExtResource("16_k674e")]
+transform = Transform3D(1.788193e-07, 0, 1.3636364, 0, 1.3636364, 0, -1.3636364, 0, 1.788193e-07, -0.55, 1.2, 0.015)
+
+[node name="bureta" parent="laboratorio/sala2/puesto1" unique_id=1971608726 instance=ExtResource("24_c441i")]
+transform = Transform3D(-7.86805e-08, 0, -1.8, 0, 1.8, 0, 1.8, 0, -7.86805e-08, 0.41467905, 1.2, 1.4749999)
+
+[node name="puesto2" parent="laboratorio/sala2" unique_id=1777085983 instance=ExtResource("15_kuugj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.504, 0, -0.6898644)
+
+[node name="taburete" parent="laboratorio/sala2/puesto2" unique_id=1691206636 instance=ExtResource("22_asu1p")]
+transform = Transform3D(-22, 0, 3.3219076e-06, 0, 22, 0, -3.3219076e-06, 0, -22, -1.22, 0.094742954, -1.9800001)
+
+[node name="ventana1" parent="laboratorio/sala2" unique_id=169200193 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.143262, 1.55, -5)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="laboratorio/sala2/ventana1" unique_id=551730834]
+transform = Transform3D(0.31821525, -0.81834185, -0.47859758, 0.051170405, -0.48927742, 0.87062573, -0.9466365, -0.30153644, -0.11382066, -0.6646434, 1.9529936, 0.15734768)
+light_color = Color(0.9843281, 0.9778355, 0.89037704, 1)
+light_energy = 0.345
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 9.944
+spot_attenuation = -1.07
+spot_angle = 50.0
+spot_angle_attenuation = 0.8408954
+
+[node name="ventana3" parent="laboratorio/sala2" unique_id=825557567 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.1557431, 1.55, -5)
+
+[node name="ventana5" parent="laboratorio/sala2" unique_id=629870335 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5072943, 1.55, -5)
+
+[node name="ventana6" parent="laboratorio/sala2" unique_id=128579733 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4807057, 1.55, -5)
+
+[node name="techo" parent="laboratorio/sala2" unique_id=1194121135 instance=ExtResource("32_fbyge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 5)
+
+[node name="leds" type="Node3D" parent="laboratorio/sala2/techo" unique_id=876927508]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala2/techo/leds" unique_id=1719387240 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala2/techo/leds" unique_id=1523480780 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala2/techo/leds" unique_id=1043120519 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala2/techo/leds" unique_id=716250518 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds2" type="Node3D" parent="laboratorio/sala2/techo" unique_id=533436330]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala2/techo/leds2" unique_id=876774926 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala2/techo/leds2" unique_id=1557419029 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala2/techo/leds2" unique_id=171557321 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala2/techo/leds2" unique_id=224729454 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds3" type="Node3D" parent="laboratorio/sala2/techo" unique_id=772769478]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -3.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala2/techo/leds3" unique_id=654874157 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala2/techo/leds3" unique_id=1992861760 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala2/techo/leds3" unique_id=1357724766 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala2/techo/leds3" unique_id=1041068223 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds4" type="Node3D" parent="laboratorio/sala2/techo" unique_id=1720638739]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -6.2, 0, -5)
+
+[node name="led1" parent="laboratorio/sala2/techo/leds4" unique_id=111136064 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala2/techo/leds4" unique_id=1208287873 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala2/techo/leds4" unique_id=1181099779 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala2/techo/leds4" unique_id=1984909173 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="laboratorio/sala2/techo" unique_id=1497011435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.371139e-09, -2, -5.1)
+blend_distance = 0.8
+size = Vector3(18, 7, 12)
+box_projection = true
+interior = true
+
+[node name="armario" parent="laboratorio/sala2" unique_id=950465338 instance=ExtResource("35_dtq0o")]
+transform = Transform3D(-0.85, 0, 7.430936e-08, 0, 0.85, 0, -7.430936e-08, 0, -0.85, -2.1, 0, 4.9)
+
+[node name="espatula" parent="laboratorio/sala2/armario" unique_id=19438470 instance=ExtResource("36_2fd2d")]
+transform = Transform3D(2.0000005, 0, 7.1054274e-15, 0, 2.0000005, 0, -7.1054274e-15, 0, 2.0000005, 0.635, 1.44, 0.8)
+
+[node name="barquilla" parent="laboratorio/sala2/armario" unique_id=731658010 instance=ExtResource("37_kuugj")]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.29, 1.44, 0.8)
+
+[node name="tubo" parent="laboratorio/sala2/armario" unique_id=1586596509 instance=ExtResource("38_k674e")]
+transform = Transform3D(-5.6824803e-08, -1.3, 0, 1.3, -5.6824803e-08, 0, 0, 0, 1.3, 0.85, 2.18, 0.75)
+
+[node name="vaso_precipitado" parent="laboratorio/sala2/armario" unique_id=2045567286 instance=ExtResource("39_mtv8m")]
+transform = Transform3D(1.2, 0, 4.2632557e-15, 0, 1.2, 0, -4.2632557e-15, 0, 1.2, 0.1, 2.13, 0.75)
+
+[node name="probeta" parent="laboratorio/sala2/armario" unique_id=612368947 instance=ExtResource("29_2erit")]
+transform = Transform3D(-5.142519e-08, 0, 1.1764708, 0, 1.1764708, 0, -1.1764708, 0, -5.142519e-08, -0.2, 2.13, 0.75)
+
+[node name="erlenmeyer" parent="laboratorio/sala2/armario" unique_id=1792732694 instance=ExtResource("42_l331c")]
+transform = Transform3D(1.15, 0, 0, 0, 1.15, 0, 0, 0, 1.15, -0.5, 2.13, 0.75)
+
+[node name="crisol" parent="laboratorio/sala2/armario" unique_id=591892074 instance=ExtResource("52_va3pj")]
+transform = Transform3D(-2.0000005, 0, -3.019917e-07, 0, 2.0000005, 0, 3.019917e-07, 0, -2.0000005, -0.411, 1.44, 0.739)
+
+[node name="embudo" parent="laboratorio/sala2/armario" unique_id=388159407 instance=ExtResource("26_165m4")]
+transform = Transform3D(1.4117646, -1.234204e-07, -2.4684078e-07, -1.2342042e-07, -1.4117646, 1.2342042e-07, -2.4684084e-07, -1.2342045e-07, -1.4117646, -0.3, 2.4, 0.4)
+
+[node name="matraz" parent="laboratorio/sala2/armario" unique_id=190027044 instance=ExtResource("25_l331c")]
+transform = Transform3D(-1.4117646, 0, -1.2342042e-07, 0, 1.4117646, 0, 1.2342042e-07, 0, -1.4117646, -0.72, 2.13, 0.45)
+
+[node name="pesafiltros" parent="laboratorio/sala2/armario" unique_id=1823114602 instance=ExtResource("53_5daf5")]
+transform = Transform3D(2.0000005, 0, 1.4210855e-14, 0, 2.0000005, 0, -1.4210855e-14, 0, 2.0000005, 0.4, 2.202, 0.5)
+
+[node name="pipeta" parent="laboratorio/sala2/armario" unique_id=658519733 instance=ExtResource("27_ybe0x")]
+transform = Transform3D(-2.0570077e-08, -0.47058856, 2.057008e-08, 0, -2.057008e-08, -0.47058856, 0.47058856, -2.0570077e-08, 8.991464e-16, -0.466, 2.14, 0.251)
+
+[node name="pipeteador" parent="laboratorio/sala2/armario" unique_id=1501314691 instance=ExtResource("28_pgymd")]
+transform = Transform3D(1.1764704, 2.0377064, -8.907102e-08, 0, -1.0285034e-07, -2.3529415, -2.0377064, 1.1764704, -5.142519e-08, -0.045, 1.44, 0.64)
+
+[node name="armario_quimicos" parent="laboratorio/sala2" unique_id=2098483181 instance=ExtResource("35_cejd5")]
+transform = Transform3D(-2.5, 0, -2.1855696e-07, 0, 2.5, 0, 2.1855696e-07, 0, -2.5, -0.3, 0, 4.9)
+
+[node name="tarro" parent="laboratorio/sala2/armario_quimicos" unique_id=720172955 instance=ExtResource("37_dtq0o")]
+transform = Transform3D(0.02, 0, -2.220446e-16, 0, 0.02, 0, 2.220446e-16, 0, 0.02, 0.15, 0.73, 0.24)
+
+[node name="envase" parent="laboratorio/sala2/armario_quimicos" unique_id=917597751 instance=ExtResource("41_h3abv")]
+transform = Transform3D(0.015, 0, -2.220446e-16, 0, 0.015, 0, 2.220446e-16, 0, 0.015, 0.08, 0.73, 0.24)
+
+[node name="lavador" parent="laboratorio/sala2/armario_quimicos" unique_id=712551643 instance=ExtResource("45_pjhkh")]
+transform = Transform3D(0.03, 0, 0, 0, 0.03, 0, 0, 0, 0.03, 0.22, 0.73, 0.24)
+
+[node name="bote" parent="laboratorio/sala2/armario_quimicos" unique_id=1378559756 instance=ExtResource("46_nra2v")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, 0.02, 0.73, 0.24)
+
+[node name="bote_cuentagotas" parent="laboratorio/sala2/armario_quimicos" unique_id=1386530863 instance=ExtResource("47_c441i")]
+transform = Transform3D(0.015, 0, 0, 0, 0.015, 0, 0, 0, 0.015, -0.03, 0.73, 0.24)
+
+[node name="frasco" parent="laboratorio/sala2/armario_quimicos" unique_id=663399249 instance=ExtResource("48_c441i")]
+transform = Transform3D(0.015, 0, -1.6653345e-16, 0, 0.015, 0, 1.6653345e-16, 0, 0.015, -0.08, 0.73, 0.24)
+
+[node name="bote2" parent="laboratorio/sala2/armario_quimicos" unique_id=757921511 instance=ExtResource("50_165m4")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -0.14, 0.73, 0.24)
+
+[node name="bidon" parent="laboratorio/sala2/armario_quimicos" unique_id=329743623 instance=ExtResource("30_hhfpm")]
+transform = Transform3D(0.05, 0, -8.881784e-16, 0, 0.05, 0, 8.881784e-16, 0, 0.05, 0.15, 0.248, 0.2)
+
+[node name="mesa_antivibraciones" parent="laboratorio/sala2" unique_id=1806883583 instance=ExtResource("35_ekyc5")]
+transform = Transform3D(-1.2, 0, -1.0490733e-07, 0, 1.2, 0, 1.0490733e-07, 0, -1.2, -4, 0, 4.9)
+
+[node name="balanza" parent="laboratorio/sala2/mesa_antivibraciones" unique_id=781128506 instance=ExtResource("39_pa56l")]
+transform = Transform3D(1.2, 0, -1.0231818e-14, 0, 1.2, 0, 1.0231818e-14, 0, 1.2, 0, 1, 0.4)
+
+[node name="pizarra" parent="laboratorio/sala2" unique_id=1782817600 instance=ExtResource("30_dh4wf")]
+transform = Transform3D(-0.21213202, 0, 0.21213202, 0, 0.3, 0, -0.21213202, 0, -0.21213202, -6.45, 0, 3.5)
+
+[node name="sala1" parent="laboratorio" unique_id=1967452085 instance=ExtResource("34_x6jt7")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 12)
+
+[node name="techo" parent="laboratorio/sala1" unique_id=1577537106 instance=ExtResource("32_fbyge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 5)
+
+[node name="leds" type="Node3D" parent="laboratorio/sala1/techo" unique_id=1520038447]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2.985444, 0, -5)
+
+[node name="led1" parent="laboratorio/sala1/techo/leds" unique_id=1812887028 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala1/techo/leds" unique_id=1624964888 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala1/techo/leds" unique_id=2019556573 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala1/techo/leds" unique_id=182877414 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="leds2" type="Node3D" parent="laboratorio/sala1/techo" unique_id=94033929]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, -0.014555931, 0, -5)
+
+[node name="led1" parent="laboratorio/sala1/techo/leds2" unique_id=1287816789 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/sala1/techo/leds2" unique_id=1550820549 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/sala1/techo/leds2" unique_id=1605259141 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/sala1/techo/leds2" unique_id=270714115 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="laboratorio/sala1/techo" unique_id=847064270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6607122, -2, -5.1)
+blend_distance = 0.8
+size = Vector3(7, 7, 12)
+box_projection = true
+interior = true
+
+[node name="ventana1" parent="laboratorio/sala1" unique_id=517699602 instance=ExtResource("31_6opp8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.055, 1.55, -5)
+
+[node name="SpotLight3D" type="SpotLight3D" parent="laboratorio/sala1/ventana1" unique_id=548326793]
+transform = Transform3D(0.31821525, -0.81834185, -0.47859758, 0.051170405, -0.48927742, 0.87062573, -0.9466365, -0.30153644, -0.11382066, -0.6646434, 1.9529936, 0.15734768)
+light_color = Color(0.9843281, 0.9778355, 0.89037704, 1)
+light_energy = 0.215
+light_specular = 1.0
+shadow_enabled = true
+spot_range = 9.944
+spot_attenuation = -1.07
+spot_angle = 50.0
+spot_angle_attenuation = 0.8408954
+
+[node name="mesa_antivibraciones" parent="laboratorio/sala1" unique_id=1867711594 instance=ExtResource("35_ekyc5")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -1.15, 0, 0)
+
+[node name="balanza_antivibraciones" parent="laboratorio/sala1/mesa_antivibraciones" unique_id=239542739 instance=ExtResource("39_ufai3")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1, 0.4)
+
+[node name="mesa_antivibraciones2" parent="laboratorio/sala1" unique_id=1958770762 instance=ExtResource("35_ekyc5")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -1.15, 0, -3)
+
+[node name="balanza_antivibraciones" parent="laboratorio/sala1/mesa_antivibraciones2" unique_id=735595194 instance=ExtResource("39_ufai3")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1, 0.4)
+
+[node name="mesa_antivibraciones3" parent="laboratorio/sala1" unique_id=1417257673 instance=ExtResource("35_ekyc5")]
+transform = Transform3D(-5.2453668e-08, 0, 1.2, 0, 1.2, 0, -1.2, 0, -5.2453668e-08, -1.15, 0, 3)
+
+[node name="balanza_antivibraciones" parent="laboratorio/sala1/mesa_antivibraciones3" unique_id=1941307999 instance=ExtResource("39_ufai3")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, 0, 1, 0.4)
+
+[node name="pasillo" parent="laboratorio" unique_id=503559506 instance=ExtResource("35_f08nu")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 4.975, 0, -2.4)
+
+[node name="techo" parent="laboratorio/pasillo" unique_id=376627870 instance=ExtResource("32_fbyge")]
+transform = Transform3D(2.5, 0, 0, 0, 1, 0, 0, 0, 0.55, 3.355, 4, 0.12)
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="laboratorio/pasillo/techo" unique_id=1992131318]
+transform = Transform3D(-7.947526e-08, 0, 0.4, 0, 1, 0, -1.8181819, 0, -3.6125118e-07, -1.195, -2, -4.115)
+blend_distance = 0.8
+size = Vector3(6, 7, 32)
+box_projection = true
+interior = true
+
+[node name="luces" type="Node3D" parent="laboratorio/pasillo" unique_id=1503462583]
+
+[node name="leds" type="Node3D" parent="laboratorio/pasillo/luces" unique_id=1808759137]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -1.2000003)
+
+[node name="led1" parent="laboratorio/pasillo/luces/leds" unique_id=1431002708 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/pasillo/luces/leds" unique_id=39019245 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/pasillo/luces/leds" unique_id=608587875 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/pasillo/luces/leds" unique_id=2020608151 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="led5" parent="laboratorio/pasillo/luces/leds" unique_id=155484104 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.007, 0)
+
+[node name="led6" parent="laboratorio/pasillo/luces/leds" unique_id=2063105445 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.007, 0)
+
+[node name="led7" parent="laboratorio/pasillo/luces/leds" unique_id=2113992863 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.007, 0)
+
+[node name="led8" parent="laboratorio/pasillo/luces/leds" unique_id=978014484 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.007, 0)
+
+[node name="led9" parent="laboratorio/pasillo/luces/leds" unique_id=1601263865 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.007, 0)
+
+[node name="led10" parent="laboratorio/pasillo/luces/leds" unique_id=96536833 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.007, 0)
+
+[node name="led11" parent="laboratorio/pasillo/luces/leds" unique_id=94898714 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.007, 0)
+
+[node name="led12" parent="laboratorio/pasillo/luces/leds" unique_id=1450915968 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.007, 0)
+
+[node name="led13" parent="laboratorio/pasillo/luces/leds" unique_id=1834685129 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -0.007, 0)
+
+[node name="led14" parent="laboratorio/pasillo/luces/leds" unique_id=1364838830 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -0.007, 0)
+
+[node name="leds2" type="Node3D" parent="laboratorio/pasillo/luces" unique_id=1496377303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, -3.4)
+
+[node name="led1" parent="laboratorio/pasillo/luces/leds2" unique_id=2069828097 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.007, 0)
+
+[node name="led2" parent="laboratorio/pasillo/luces/leds2" unique_id=35563058 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.007, 0)
+
+[node name="led3" parent="laboratorio/pasillo/luces/leds2" unique_id=1185043145 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.007, 0)
+
+[node name="led4" parent="laboratorio/pasillo/luces/leds2" unique_id=1694558154 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -0.007, 0)
+
+[node name="led5" parent="laboratorio/pasillo/luces/leds2" unique_id=1092079460 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -0.007, 0)
+
+[node name="led6" parent="laboratorio/pasillo/luces/leds2" unique_id=595636256 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -0.007, 0)
+
+[node name="led7" parent="laboratorio/pasillo/luces/leds2" unique_id=458168030 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, -0.007, 0)
+
+[node name="led8" parent="laboratorio/pasillo/luces/leds2" unique_id=2104506332 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, -0.007, 0)
+
+[node name="led9" parent="laboratorio/pasillo/luces/leds2" unique_id=22132343 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -0.007, 0)
+
+[node name="led10" parent="laboratorio/pasillo/luces/leds2" unique_id=1417011478 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, -0.007, 0)
+
+[node name="led11" parent="laboratorio/pasillo/luces/leds2" unique_id=1950343164 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, -0.007, 0)
+
+[node name="led12" parent="laboratorio/pasillo/luces/leds2" unique_id=900309056 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, -0.007, 0)
+
+[node name="led13" parent="laboratorio/pasillo/luces/leds2" unique_id=1483832650 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, -0.007, 0)
+
+[node name="led14" parent="laboratorio/pasillo/luces/leds2" unique_id=267142708 instance=ExtResource("32_es1ty")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, -0.007, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="laboratorio" unique_id=1082373272]
+environment = SubResource("Environment_a8frf")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="laboratorio/WorldEnvironment" unique_id=1424556992]
+transform = Transform3D(0.37669596, -0.57056767, -0.7297622, 0.87259716, 0.48298436, 0.072802745, 0.3109248, -0.66421294, 0.67981386, -12.217102, 3.6175156, 8.433105)
+light_energy = 0.5
+shadow_enabled = true
+shadow_opacity = 0.5

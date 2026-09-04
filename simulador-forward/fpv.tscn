@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://d0k4ythb10wao"]
+
+[ext_resource type="Script" uid="uid://nf8hilsbo8f8" path="res://scripts_fpv/yaw.gd" id="1_4g7qf"]
+[ext_resource type="Script" uid="uid://coa525nxn6bt6" path="res://scripts_fpv/mov.gd" id="1_oobrr"]
+[ext_resource type="Script" uid="uid://dxtfk3yhrl8x2" path="res://scripts_fpv/pitch.gd" id="3_va304"]
+[ext_resource type="Script" uid="uid://7igct18gvl7c" path="res://scripts_fpv/sistemas.gd" id="4_4qemw"]
+[ext_resource type="Script" uid="uid://wx86uw4r2sn4" path="res://scripts_fpv/input.gd" id="5_cn208"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_07ths"]
+radius = 0.2
+height = 3.0
+
+[node name="Node3D" type="Node3D" unique_id=1660382107]
+
+[node name="FPV" type="CharacterBody3D" parent="." unique_id=1360709201 groups=["player"]]
+script = ExtResource("1_oobrr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FPV" unique_id=1285811150]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+shape = SubResource("CapsuleShape3D_07ths")
+
+[node name="Yaw" type="Node3D" parent="FPV" unique_id=1827946519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+script = ExtResource("1_4g7qf")
+
+[node name="Pitch" type="Camera3D" parent="FPV/Yaw" unique_id=505665028]
+script = ExtResource("3_va304")
+
+[node name="RayCast3D" type="RayCast3D" parent="FPV/Yaw/Pitch" unique_id=1004456543]
+target_position = Vector3(0, 0, -3)
+
+[node name="Marker3D" type="Marker3D" parent="FPV/Yaw/Pitch" unique_id=1639083608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+
+[node name="Sistemas" type="Node3D" parent="FPV" unique_id=522426897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.75, 0)
+script = ExtResource("4_4qemw")
+
+[node name="Input" type="Node3D" parent="FPV" unique_id=1947900885]
+script = ExtResource("5_cn208")

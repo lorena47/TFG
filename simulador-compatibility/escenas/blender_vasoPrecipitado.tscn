@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://c461bld8e8egq"]
+
+[ext_resource type="PackedScene" uid="uid://bgmj423s224ck" path="res://modelos/glb/vaso_precipitado.glb" id="1_f3633"]
+[ext_resource type="Script" uid="uid://daywvmvroynii" path="res://scripts_sistemas/contenedor.gd" id="1_fj4un"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_ofdxi"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_xnuy4"]
+
+[sub_resource type="Resource" id="Resource_w34vn"]
+script = ExtResource("2_ofdxi")
+nombre = "Vaso de precipitado"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xnuy4"]
+size = Vector3(0.2, 0.3, 0.2)
+
+[node name="vasoPrecipitado" type="Node3D" unique_id=965537214]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=26893150]
+script = ExtResource("1_fj4un")
+info = SubResource("Resource_w34vn")
+desplazamiento_mano = Vector3(0, -0.1, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1166258574]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14, 0)
+shape = SubResource("BoxShape3D_xnuy4")
+
+[node name="modelo" parent="RigidBody3D" unique_id=2045567286 instance=ExtResource("1_f3633")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1005211737]
+surface_material_override/0 = ExtResource("2_xnuy4")
+
+[node name="Marker3D" type="Marker3D" parent="RigidBody3D" unique_id=1678624781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.008561745, 0)
+
+[editable path="RigidBody3D/modelo"]

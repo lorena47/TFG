@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://broga4w1k3r1a"]
+
+[ext_resource type="PackedScene" uid="uid://dyyld2ym2djgk" path="res://modelos/glb/probeta.glb" id="1_4n3a1"]
+[ext_resource type="Script" uid="uid://c4myykypl2eg0" path="res://scripts_sistemas/recipiente.gd" id="1_cey6r"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_hxv6u"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_onx4v"]
+
+[sub_resource type="Resource" id="Resource_lr8co"]
+script = ExtResource("2_hxv6u")
+nombre = "Probeta"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_r044l"]
+size = Vector3(0.1, 0.36, 0.1)
+
+[node name="probeta" type="Node3D" unique_id=1659056799]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1631848843]
+script = ExtResource("1_cey6r")
+fluido = true
+CANTIDAD_MAXIMA_CONTENIDO = 0.0
+CANTIDAD_MAXIMA_LIQUIDO = 10.0
+eje_escala_liquido = Vector3(0, 0.1, 0)
+info = SubResource("Resource_lr8co")
+desplazamiento_mano = Vector3(0, -0.15, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1358186854]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17, 0)
+shape = SubResource("BoxShape3D_r044l")
+
+[node name="modelo" parent="RigidBody3D" unique_id=169299361 instance=ExtResource("1_4n3a1")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=429464971]
+surface_material_override/0 = ExtResource("2_onx4v")
+
+[node name="base" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=396250059]
+visible = false
+
+[node name="liquido" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=339708294]
+visible = false
+
+[editable path="RigidBody3D/modelo"]

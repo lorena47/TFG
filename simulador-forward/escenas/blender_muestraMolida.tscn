@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://c1meek383g1os"]
+
+[ext_resource type="PackedScene" uid="uid://dne6e86ns5m5y" path="res://modelos/glb/tarro.glb" id="1_hl58b"]
+[ext_resource type="Script" uid="uid://bgu1we5if385q" path="res://scripts_sistemas/sustancia.gd" id="1_te505"]
+[ext_resource type="Texture2D" uid="uid://ca1g3fd8wygfp" path="res://materiales_mios/muestra_molida.png" id="2_6cyt5"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_nxwwe"]
+[ext_resource type="Material" uid="uid://b52xu104cbt3b" path="res://materiales_mios/vidrio.tres" id="2_pbxqp"]
+[ext_resource type="Material" uid="uid://bm8hd42nuq860" path="res://materiales_mios/dorado.tres" id="3_pbxqp"]
+
+[sub_resource type="Resource" id="Resource_up1c1"]
+script = ExtResource("2_nxwwe")
+nombre = "Muestra molida"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nok2v"]
+size = Vector3(3.2, 3.2, 3.2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pd1cm"]
+albedo_texture = ExtResource("2_6cyt5")
+
+[node name="tarro" type="Node3D" unique_id=364037415]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=256915663]
+script = ExtResource("1_te505")
+info = SubResource("Resource_up1c1")
+desplazamiento_mano = Vector3(0, -0.03, 0)
+escala_mano = Vector3(0.05, 0.05, 0.05)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1489146697]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0)
+shape = SubResource("BoxShape3D_nok2v")
+
+[node name="modelo" parent="RigidBody3D" unique_id=1447714175 instance=ExtResource("1_hl58b")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=891211296]
+surface_material_override/0 = ExtResource("2_pbxqp")
+
+[node name="contenido" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=65100173]
+surface_material_override/0 = SubResource("StandardMaterial3D_pd1cm")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="1" unique_id=1050640318]
+surface_material_override/0 = ExtResource("3_pbxqp")
+
+[editable path="RigidBody3D/modelo"]

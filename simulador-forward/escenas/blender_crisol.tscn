@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://cf0aec70nf2dw"]
+
+[ext_resource type="PackedScene" uid="uid://by114ux83o4pt" path="res://modelos/glb/crisol.glb" id="1_ids1l"]
+[ext_resource type="Script" uid="uid://bjrhun48h7lq8" path="res://scripts_sistemas/movil.gd" id="1_j6in6"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="2_oymka"]
+[ext_resource type="Material" uid="uid://dsorqk73vihiq" path="res://materiales_mios/crema.tres" id="2_twgjd"]
+
+[sub_resource type="Resource" id="Resource_hi8bt"]
+script = ExtResource("2_oymka")
+nombre = "Crisol"
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qfehq"]
+size = Vector3(0.07, 0.08, 0.07)
+
+[node name="crisol" type="Node3D" unique_id=591892074]
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=557170573]
+script = ExtResource("1_j6in6")
+info = SubResource("Resource_hi8bt")
+
+[node name="modelo" parent="RigidBody3D" unique_id=153939944 instance=ExtResource("1_ids1l")]
+
+[node name="cuerpo" parent="RigidBody3D/modelo" index="0" unique_id=1857385759]
+surface_material_override/0 = ExtResource("2_twgjd")
+
+[node name="tapa" parent="RigidBody3D/modelo/cuerpo" index="0" unique_id=1545917819]
+surface_material_override/0 = ExtResource("2_twgjd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=1464350851]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.04, 0)
+shape = SubResource("BoxShape3D_qfehq")
+
+[editable path="RigidBody3D/modelo"]

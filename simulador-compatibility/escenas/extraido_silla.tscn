@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://q3wpx1yne7wc"]
+
+[ext_resource type="PackedScene" uid="uid://77sluy4gmfg8" path="res://modelos/glb/silla.glb" id="1_3cgq2"]
+[ext_resource type="Material" uid="uid://cfk13sss14k2g" path="res://materiales_mios/pasta_negro.tres" id="2_tb3w7"]
+[ext_resource type="Material" path="res://texturas_importadas/rubber/Rubber001_1K-PNG.tres" id="3_a580l"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tb3w7"]
+size = Vector3(0.03, 0.08, 0.03)
+
+[node name="silla" unique_id=400577604 instance=ExtResource("1_3cgq2")]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0, 0)
+
+[node name="soportes" parent="." index="0" unique_id=1675629122]
+surface_material_override/0 = ExtResource("2_tb3w7")
+
+[node name="asiento" parent="." index="1" unique_id=2029420333]
+surface_material_override/0 = ExtResource("3_a580l")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="2" unique_id=1447878677]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=1981552379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.037963133, 0)
+shape = SubResource("BoxShape3D_tb3w7")

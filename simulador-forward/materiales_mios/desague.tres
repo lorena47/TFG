@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://c7gtgpm86lhch"]
+
+[ext_resource type="Texture2D" uid="uid://chxvrfv7k8jht" path="res://materiales_mios/desague.png" id="1_hl1fc"]
+
+[resource]
+albedo_color = Color(0.6847319, 0.6847319, 0.6847319, 1)
+albedo_texture = ExtResource("1_hl1fc")
+metallic = 1.0
+roughness = 0.4
+rim = 0.2

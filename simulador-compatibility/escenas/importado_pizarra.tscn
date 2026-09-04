@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bc5da15gcax2i"]
+
+[ext_resource type="PackedScene" uid="uid://doq2ps4dethcg" path="res://modelos_blender/glb/pizarra.glb" id="1_tf0cp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tf0cp"]
+size = Vector3(8.5, 9, 4)
+
+[node name="pizarra" unique_id=1782817600 instance=ExtResource("1_tf0cp")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="10" unique_id=887493339]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0" unique_id=569352609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.18037415, 4.2189636, -0.049224854)
+shape = SubResource("BoxShape3D_tf0cp")

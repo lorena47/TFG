@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://d0c1ko7px6yaf"]
+
+[ext_resource type="PackedScene" uid="uid://dxliruayrijso" path="res://modelos/glb/ventana.glb" id="1_7wmjb"]
+[ext_resource type="Material" uid="uid://cpw4ys7kvv2oe" path="res://materiales_mios/puesto_estante.tres" id="2_cpnhc"]
+[ext_resource type="Script" uid="uid://bb0r762vg5anc" path="res://scripts_sistemas/mueble.gd" id="2_gig0t"]
+[ext_resource type="Script" uid="uid://q87tm2mol570" path="res://scripts_sistemas/puerta.gd" id="4_b4re6"]
+[ext_resource type="Script" uid="uid://cv3ry3j57kjpa" path="res://scripts_sistemas/informacion.gd" id="5_b4re6"]
+
+[sub_resource type="Resource" id="Resource_6cwsy"]
+script = ExtResource("5_b4re6")
+nombre = " "
+metadata/_custom_type_script = "uid://cv3ry3j57kjpa"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_uk62v"]
+size = Vector3(0.7, 1.5, 0.15)
+
+[node name="ventana" unique_id=591232523 instance=ExtResource("1_7wmjb")]
+script = ExtResource("2_gig0t")
+puertas = Array[String]([""])
+
+[node name="puerta" parent="." index="0" unique_id=413780580]
+surface_material_override/0 = ExtResource("2_cpnhc")
+
+[node name="manivela" parent="puerta" index="1" unique_id=584616719]
+surface_material_override/0 = ExtResource("2_cpnhc")
+
+[node name="giro" parent="puerta/manivela" index="0" unique_id=155089345]
+surface_material_override/0 = ExtResource("2_cpnhc")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="puerta" index="2" unique_id=347162629]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6552968, -0.95950764, -0.055292577)
+script = ExtResource("4_b4re6")
+info = SubResource("Resource_6cwsy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="puerta/StaticBody3D" index="0" unique_id=1245928926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.33389246, 0.9722911, 0)
+shape = SubResource("BoxShape3D_uk62v")
+
+[node name="estructura" parent="." index="1" unique_id=181754682]
+surface_material_override/0 = ExtResource("2_cpnhc")
+
+[node name="cristalDch" parent="estructura" index="0" unique_id=619848653]
+cast_shadow = 0
+
+[node name="cristalIzq" parent="estructura" index="1" unique_id=1298888851]
+cast_shadow = 0
