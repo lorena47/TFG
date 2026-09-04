@@ -35,6 +35,6 @@ Para no descargar nada, prueba la versión Compatibility directamente desde el n
 
 Todos los modelos utilizados en el escenario se encuentran en la carpeta [`blend/`](./blend), clasificados según su origen:
 
-- [`blend/hechos/`](./blend/hechos) — Modelos **hechos**: creados por completo desde cero.
-- [`blend/extraidos/`](./blend/extraidos) — Modelos **extraídos**: extracción y modificación de objetos procedentes de un modelo de laboratorio de terceros de mayor tamaño.
-- [`blend/importados/`](./blend/importados) — Modelos **importados**: modelos de terceros modificados pero usados de forma completa (sin extracción parcial).
+- [`blend/hecho/`](./blend/hecho) — Modelos **hechos**: creados por completo desde cero.
+- [`blend/extraido/`](./blend/extraido) — Modelos **extraídos**: extracción y modificación de objetos procedentes de un modelo de laboratorio de terceros de mayor tamaño.
+- [`blend/importado/`](./blend/importado) — Modelos **importados**: modelos de terceros modificados pero usados de forma completa (sin extracción parcial).
